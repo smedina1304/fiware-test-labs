@@ -1,0 +1,36 @@
+{
+    "devices": [
+        {
+            "device_id": "server001",
+            "entity_name": "urn:ngsi-ld:Server:001",
+            "entity_type": "Server",
+            "transport": "HTTP",
+            "endpoint": "http://cpu-provider:80/server",
+            "attributes": [
+                {
+                    "object_id": "cpu",
+                    "name": "cpu",
+                    "type": "Number"
+                },
+                {
+                    "object_id": "mem",
+                    "name": "memory",
+                    "type": "Number"
+                }
+            ],
+            "commands": [
+                {
+                    "name": "switch",
+                    "type": "command"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:Rack:SP:001"
+                }
+            ]
+        }
+    ]
+}

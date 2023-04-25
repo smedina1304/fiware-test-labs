@@ -1,0 +1,26 @@
+{
+    "description": "Notify Cygnus of cpu and memory changes",
+    "subject": {
+        "entities": [
+            {
+                "idPattern": "urn:ngsi-ld:Server:*",
+                "type": "Server"
+            }
+        ],
+        "condition": {
+            "attrs": [
+                "cpu"
+            ]
+        }
+    },
+    "notification": {
+        "http": {
+            "url": "http://cygnus:5050/notify"
+        },
+        "attrs": [
+            "cpu",
+            "mem"
+        ]
+    },
+    "throttling": 5
+}
