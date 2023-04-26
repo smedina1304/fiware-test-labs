@@ -4,7 +4,7 @@
         "entities": [
             {
                 "idPattern": "urn:ngsi-ld:Server:*",
-                "type": "Server"
+                "type": "Computer"
             }
         ],
         "condition": {

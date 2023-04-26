@@ -19,8 +19,9 @@ def echo():
     return make_response(json.dumps(DATA), 200)
 
 
-@app.route("/server", methods=["GET", "POST"])
-def device1():
+@app.route("/command", methods=["GET", "POST"])
+def command():
+    global SEND    
 
     # Validação do Retorno
     msg = None
@@ -35,7 +36,7 @@ def device1():
                 cod = 200
                 msg = {"switch": "Started sending data"}
             elif SEND == True:
-                SEND == False
+                SEND = False
                 cod = 200
                 msg = {"switch": "Stopped sending data"}
             else:
@@ -92,7 +93,11 @@ def registry():
             cod = 412
             msg = {'error':cod,'message':'Precondition Failed','detail':'attribute metrics is no data available'}             
         else:
+            global DATA
+            
             DATA[device_id] = {'device_id': f'{device_id}', 'apikey': f'{apikey}', 'metrics': metrics}
+
+            sendData(key=apikey, id=device_id, metrics=metrics)
 
             cod = 202
             msg = {'success':cod,'message':'Accepted','detail':'received data'}  

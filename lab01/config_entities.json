@@ -66,7 +66,7 @@
                 "type": "Text",
                 "value": "Poyry SP"
             },
-            "refStore": {
+            "relationship": {
                 "type": "Relationship",
                 "value": "urn:ngsi-ld:Poyry:br"
             }
@@ -103,7 +103,7 @@
                 "type": "Text",
                 "value": "Poyry MG"
             },
-            "refStore": {
+            "relationship": {
                 "type": "Relationship",
                 "value": "urn:ngsi-ld:Poyry:br"
             }
@@ -115,7 +115,7 @@
                 "type": "Text",
                 "value": "Rack 001 SP"
             },
-            "refStore": {
+            "relationship": {
                 "type": "Relationship",
                 "value": "urn:ngsi-ld:Poyry:br:sp"
             }
@@ -127,7 +127,7 @@
                 "type": "Text",
                 "value": "Rack 002 BH"
             },
-            "refStore": {
+            "relationship": {
                 "type": "Relationship",
                 "value": "urn:ngsi-ld:Poyry:br:bh"
             }

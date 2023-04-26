@@ -3,9 +3,9 @@
         {
             "device_id": "server001",
             "entity_name": "urn:ngsi-ld:Server:001",
-            "entity_type": "Server",
+            "entity_type": "Computer",
             "transport": "HTTP",
-            "endpoint": "http://cpu-provider:80/server",
+            "endpoint": "http://cpu-provider:80/command",
             "attributes": [
                 {
                     "object_id": "cpu",
