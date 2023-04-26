@@ -5,7 +5,7 @@ import json
 import psutil
 
 # Define parameters
-agent_host = 'ip172-18-0-23-ch43tio1k7jg00eilj8g-80.direct.labs.play-with-docker.com/'
+agent_host = 'localhost'
 agent_port = 80
 
 device_id = 'server001'
@@ -14,8 +14,8 @@ metrics = None
 
 def collectData():
 
-    #url = f"http://{agent_host}:{agent_port}/registry"
-    url = f"http://{agent_host}/registry"
+    url = f"http://{agent_host}:{agent_port}/registry"
+    #url = f"http://{agent_host}/registry"
 
     headers = {"Content-Type": "application/json"}
 
