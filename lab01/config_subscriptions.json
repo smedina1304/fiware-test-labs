@@ -19,7 +19,7 @@
         },
         "attrs": [
             "cpu",
-            "mem"
+            "memory"
         ]
     },
     "throttling": 5
