@@ -148,7 +148,8 @@ services:
       - "MYSQL_ROOT_PASSWORD=123"
       - "MYSQL_ROOT_HOST=%"
     volumes:
-      - mysql-db:/var/lib/mysql
+      - ./db/mysql:/var/lib/mysql
+      # - mysql-db:/var/lib/mysql
 
   grafana:
     image: grafana/grafana
