@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "8a43d05f-aab8-4b7d-8a8c-de0de334c5b6",
+		"name": "FIWARE - Labs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5449169"
+	},
+	"item": [
+		{
+			"name": "Lab01 - CPUs",
+			"item": [
+				{
+					"name": "Preparando Hierarquia de Entidades",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "fiware-service",
+								"value": "poyry",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actionType\": \"append\",\r\n    \"entities\": [\r\n        {\r\n            \"id\": \"urn:ngsi-ld:Poyry:br\",\r\n            \"type\": \"Company\",\r\n            \"address\": {\r\n                \"type\": \"PostalAddress\",\r\n                \"value\": {\r\n                    \"streetAddress\": \"Avenida Alfredo Egídio de Souza Aranha, 100 - Bloco B - 5o Andar\",\r\n                    \"addressRegion\": \"São Paulo\",\r\n                    \"addressLocality\": \"São Paulo\",\r\n                    \"postalCode\": \"04726-170\"\r\n                },\r\n                \"metadata\": {\r\n                    \"verified\": {\r\n                        \"value\": true,\r\n                        \"type\": \"Boolean\"\r\n                    }\r\n                }\r\n            },\r\n            \"location\": {\r\n                \"type\": \"geo:json\",\r\n                \"value\": {\r\n                    \"type\": \"Point\",\r\n                    \"coordinates\": [\r\n                        -23.632733513960115, \r\n                        -46.71232693112042\r\n                    ]\r\n                }\r\n            },\r\n            \"name\": {\r\n                \"type\": \"Text\",\r\n                \"value\": \"Poyry\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"urn:ngsi-ld:Poyry:br:sp\",\r\n            \"type\": \"Site\",\r\n            \"address\": {\r\n                \"type\": \"PostalAddress\",\r\n                \"value\": {\r\n                    \"streetAddress\": \"Avenida Alfredo Egídio de Souza Aranha, 100 - Bloco B - 5o Andar\",\r\n                    \"addressRegion\": \"São Paulo\",\r\n                    \"addressLocality\": \"São Paulo\",\r\n                    \"postalCode\": \"04726-170\"\r\n                },\r\n                \"metadata\": {\r\n                    \"verified\": {\r\n                        \"value\": true,\r\n                        \"type\": \"Boolean\"\r\n                    }\r\n                }\r\n            },\r\n            \"location\": {\r\n                \"type\": \"geo:json\",\r\n                \"value\": {\r\n                    \"type\": \"Point\",\r\n                    \"coordinates\": [\r\n                        -23.632733513960115, \r\n                        -46.71232693112042\r\n                    ]\r\n                }\r\n            },\r\n            \"name\": {\r\n                \"type\": \"Text\",\r\n                \"value\": \"Poyry SP\"\r\n            },\r\n            \"relationship\": {\r\n                \"type\": \"Relationship\",\r\n                \"value\": \"urn:ngsi-ld:Poyry:br\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"urn:ngsi-ld:Poyry:br:bh\",\r\n            \"type\": \"Site\",\r\n            \"address\": {\r\n                \"type\": \"PostalAddress\",\r\n                \"value\": {\r\n                    \"streetAddress\": \"Rua Maria Luiza Santiago, 200 - 6º andar - Bairro Santa Lúcia\",\r\n                    \"addressRegion\": \"Minas Gerais\",\r\n                    \"addressLocality\": \"Belo Horizonte\",\r\n                    \"postalCode\": \"30360-740\"\r\n                },\r\n                \"metadata\": {\r\n                    \"verified\": {\r\n                        \"value\": true,\r\n                        \"type\": \"Boolean\"\r\n                    }\r\n                }\r\n            },\r\n            \"location\": {\r\n                \"type\": \"geo:json\",\r\n                \"value\": {\r\n                    \"type\": \"Point\",\r\n                    \"coordinates\": [\r\n                        -19.974966679687764, \r\n                        -43.94785050238647\r\n                    ]\r\n                }\r\n            },\r\n            \"name\": {\r\n                \"type\": \"Text\",\r\n                \"value\": \"Poyry MG\"\r\n            },\r\n            \"relationship\": {\r\n                \"type\": \"Relationship\",\r\n                \"value\": \"urn:ngsi-ld:Poyry:br\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"urn:ngsi-ld:Rack:SP:001\",\r\n            \"type\": \"Rack\",\r\n            \"name\": {\r\n                \"type\": \"Text\",\r\n                \"value\": \"Rack 001 SP\"\r\n            },\r\n            \"relationship\": {\r\n                \"type\": \"Relationship\",\r\n                \"value\": \"urn:ngsi-ld:Poyry:br:sp\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"urn:ngsi-ld:Rack:BH:002\",\r\n            \"type\": \"Rack\",\r\n            \"name\": {\r\n                \"type\": \"Text\",\r\n                \"value\": \"Rack 002 BH\"\r\n            },\r\n            \"relationship\": {\r\n                \"type\": \"Relationship\",\r\n                \"value\": \"urn:ngsi-ld:Poyry:br:bh\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:1026/v2/op/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"op",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar  grupo de serviço",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "poyry"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"services\": [\n        {\n            \"apikey\": \"PoyryLab2023\",\n            \"cbroker\": \"http://orion:1026\",\n            \"entity_type\": \"Computer\",\n            \"resource\": \"/iot/json\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4041/iot/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4041",
+							"path": [
+								"iot",
+								"services"
+							]
+						},
+						"description": "Invoking group provision is always the the first step in connecting devices. For MQTT communication, provisioning supplies the authentication key so the IoT Agent will know which **topic** it must\nsubscribe to.\n\nIt is possible to set up default commands and attributes for all devices as well, but this\nis not done within this tutorial as we will be provisioning each device separately.\n\nThis example provisions an anonymous group of devices. It tells the IoT Agent that a series of devices\nwill be communicating by sending messages to the `/4jggokgpepnvsb2uv4s40d59ov` **topic**\n\nThe `resource` attribute is left blank since HTTP communication is not being used."
+					},
+					"response": []
+				},
+				{
+					"name": "Providenciar dispositivo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "fiware-service",
+								"value": "poyry",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"devices\": [\r\n        {\r\n            \"device_id\": \"server001\",\r\n            \"entity_name\": \"urn:ngsi-ld:Server:001\",\r\n            \"entity_type\": \"Computer\",\r\n            \"transport\": \"HTTP\",\r\n            \"endpoint\": \"http://cpu-provider:80/command\",\r\n            \"attributes\": [\r\n                {\r\n                    \"object_id\": \"cpu\",\r\n                    \"name\": \"cpu\",\r\n                    \"type\": \"Number\"\r\n                },\r\n                {\r\n                    \"object_id\": \"mem\",\r\n                    \"name\": \"memory\",\r\n                    \"type\": \"Number\"\r\n                }\r\n            ],\r\n            \"commands\": [\r\n                {\r\n                    \"name\": \"switch\",\r\n                    \"type\": \"command\"\r\n                }\r\n            ],\r\n            \"static_attributes\": [\r\n                {\r\n                    \"name\": \"relationship\",\r\n                    \"type\": \"Relationship\",\r\n                    \"value\": \"urn:ngsi-ld:Rack:SP:001\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4041/iot/devices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4041",
+							"path": [
+								"iot",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notificação de Alteração",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "fiware-service",
+								"value": "poyry"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Notify Cygnus of cpu and memory changes\",\n    \"subject\": {\n        \"entities\": [\n            {\n                \"idPattern\": \"urn:ngsi-ld:Server:*\",\n                \"type\": \"Computer\"\n            }\n        ],\n        \"condition\": {\n            \"attrs\": [\n                \"cpu\"\n            ]\n        }\n    },\n    \"notification\": {\n        \"http\": {\n            \"url\": \"http://cygnus:5050/notify\"\n        },\n        \"attrs\": [\n            \"cpu\",\n            \"memory\"\n        ]\n    },\n    \"throttling\": 5\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1026/v2/subscriptions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"subscriptions",
+								""
+							]
+						},
+						"description": "Once a dynamic context system is up and running, we need to inform **Cygnus** of changes in context.\n\nThis is done by making a POST request to the `/v2/subscription` endpoint of the Orion Context Broker.\n\n* The `fiware-service` and `fiware-servicepath` headers are used to filter the subscription to only listen to measurements from the attached IoT Sensors\n* The `idPattern` in the request body ensures that Cygnus will be informed of all context data changes.\n* The notification `url` must match the configured `CYGNUS_MYSQL_SERVICE_PORT`\n* The `attrsFormat=legacy` is required since Cygnus currently only accepts notifications in the older NGSI v1 format.\n* The `throttling` value defines the rate that changes are sampled.\n\nAs you can see, the database used to persist context data has no impact on the details of the subscription. It is the same for each database."
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Atributo \"switch\"",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "poyry",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"switch\": {\r\n        \"type\": \"command\",\r\n        \"value\": \"\"     \r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1026/v2/entities/urn:ngsi-ld:Server:001/attrs?type=Computer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:Server:001",
+								"attrs"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Computer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter entidades",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "poyry",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1026/v2/entities?options=keyValues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities"
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "keyValues"
+								},
+								{
+									"key": "type",
+									"value": "Product",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter todos os Servers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "poyry",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1026/v2/entities/urn:ngsi-ld:Server:001/attrs?type=Computer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:Server:001",
+								"attrs"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Computer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter keyValues do Server001",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "poyry",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:1026/v2/entities/urn:ngsi-ld:Server:001?options=keyValues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:Server:001"
+							],
+							"query": [
+								{
+									"key": "options",
+									"value": "keyValues"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter dados - Echo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:80/echo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"echo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Medições CPU/Memória",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"device_id\": \"cpu01\",\r\n    \"apikey\": \"\",\r\n    \"metrics\": {\r\n        \"cpu\": 0,\r\n        \"mem\": 0\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:80/registry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "80",
+							"path": [
+								"registry"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

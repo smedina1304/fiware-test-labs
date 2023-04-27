@@ -50,7 +50,8 @@ services:
     networks:
       - default # Users a local network called default
     volumes: # Uses a volume to persit the data in the database
-      - mongo-db:/data
+      - ./db/mongo/data:/data
+      # - mongo-db:/data
     healthcheck: # check if Mongo DB is healthy
       test: |
         host=`hostname --ip-address || echo '127.0.0.1'`; 
@@ -161,6 +162,6 @@ services:
 networks:
   default:
   
-volumes: # Creates a volume to persit the data in the database
-  mongo-db: ~
-  mysql-db: ~
+# volumes: # Creates a volume to persit the data in the database
+#   mongo-db: ~
+#   mysql-db: ~
