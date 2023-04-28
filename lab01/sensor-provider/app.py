@@ -184,7 +184,7 @@ def getOpenweathermap():
                         'humidity' : 0,
                         'description' : f'HTTP Error: {res.status_code}'}                    
             
-            sendData(key=appid, id='station001', metrics=metrics)
+            sendData(key='PoyryWeather2023', id='station001', metrics=metrics)
 
 
         time.sleep(INTERVAL.value)

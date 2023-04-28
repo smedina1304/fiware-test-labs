@@ -11,7 +11,7 @@ curl --location 'http://localhost:4041/iot/services' \
             "resource": "/iot/json"
         },
         {
-            "apikey": "PoyryLab2023",
+            "apikey": "PoyryWeather2023",
             "cbroker": "http://orion:1026",
             "entity_type": "Weather",
             "resource": "/iot/json"
