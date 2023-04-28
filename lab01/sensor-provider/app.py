@@ -13,7 +13,7 @@ agent_port = 7896
 DATA = {}
 
 STATION = Value("b", False)
-INTERVAL = Value("i", 5)
+INTERVAL = Value("i", 180)
 
 # Define Flask Application
 app = Flask(__name__)
@@ -186,11 +186,10 @@ def getOpenweathermap():
             
             sendData(key='PoyryWeather2023', id='station001', metrics=metrics)
 
-
         time.sleep(INTERVAL.value)
 
 # Multiprocessing
-p = Process(target=sendData).start()
+p = Process(target=getOpenweathermap).start()
 
 # Main
 if __name__ == "__main__":

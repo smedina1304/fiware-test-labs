@@ -5,7 +5,7 @@ import json
 import psutil
 
 # Define parameters
-agent_host = 'ip172-18-0-82-ch5v0m2e69v000f95390-80.direct.labs.play-with-docker.com'
+agent_host = 'ip172-19-0-40-ch630bo1k7jg009fnd30-1026.direct.labs.play-with-docker.com'
 #agent_host = 'localhost'
 agent_port = 80
 
