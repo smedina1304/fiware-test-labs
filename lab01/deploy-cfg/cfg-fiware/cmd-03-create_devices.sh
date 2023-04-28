@@ -12,12 +12,12 @@ curl --location 'http://localhost:4041/iot/devices' \
                 {
                     "object_id": "cpu",
                     "name": "cpu",
-                    "type": "Number"
+                    "type": "Decimal"
                 },
                 {
                     "object_id": "mem",
                     "name": "memory",
-                    "type": "Number"
+                    "type": "Decimal"
                 }
             ],
             "static_attributes": [
@@ -25,6 +25,57 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "name": "relationship",
                     "type": "Relationship",
                     "value": "urn:ngsi-ld:Rack:SP:001"
+                }
+            ]
+        },
+        {
+            "device_id": "station001",
+            "entity_name": "urn:ngsi-ld:Station:001",
+            "entity_type": "Weather",
+            "transport": "HTTP",
+            "endpoint": "http://sensor-provider:80/command",
+            "attributes": [
+                {
+                    "object_id": "temp",
+                    "name": "temp",
+                    "type": "Decimal"
+                },
+                {
+                    "object_id": "feels_like",
+                    "name": "feels_like",
+                    "type": "Decimal"
+                },
+                {
+                    "object_id": "pressure",
+                    "name": "pressure",
+                    "type": "Decimal"
+                },
+                {
+                    "object_id": "humidity",
+                    "name": "humidity",
+                    "type": "Decimal"
+                },
+                {
+                    "object_id": "description",
+                    "name": "description",
+                    "type": "String"
+                }
+            ],
+            "commands": [
+                {
+                    "name": "switch",
+                    "type": "command"
+                },
+                {
+                    "name": "interval",
+                    "type": "command"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "relationship",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:Poyry:br:sp"
                 }
             ]
         }

@@ -9,6 +9,12 @@ curl --location 'http://localhost:4041/iot/services' \
             "cbroker": "http://orion:1026",
             "entity_type": "Computer",
             "resource": "/iot/json"
-        }
+        },
+        {
+            "apikey": "PoyryLab2023",
+            "cbroker": "http://orion:1026",
+            "entity_type": "Weather",
+            "resource": "/iot/json"
+        }        
     ]
 }'
