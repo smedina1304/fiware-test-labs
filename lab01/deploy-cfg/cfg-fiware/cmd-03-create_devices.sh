@@ -8,8 +8,6 @@ curl --location 'http://localhost:4041/iot/devices' \
             "device_id": "server001",
             "entity_name": "urn:ngsi-ld:Server:001",
             "entity_type": "Computer",
-            "transport": "HTTP",
-            "endpoint": "http://cpu-provider:80/command",
             "attributes": [
                 {
                     "object_id": "cpu",
@@ -20,12 +18,6 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "object_id": "mem",
                     "name": "memory",
                     "type": "Number"
-                }
-            ],
-            "commands": [
-                {
-                    "name": "switch",
-                    "type": "command"
                 }
             ],
             "static_attributes": [
