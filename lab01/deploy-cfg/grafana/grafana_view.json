@@ -25,7 +25,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+        "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
       },
       "description": "",
       "fieldConfig": {
@@ -117,7 +117,7 @@
           "dataset": "poyry",
           "datasource": {
             "type": "mysql",
-            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+            "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
           },
           "editorMode": "code",
           "format": "time_series",
@@ -150,7 +150,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+        "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
       },
       "fieldConfig": {
         "defaults": {
@@ -205,7 +205,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+            "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
           },
           "editorMode": "code",
           "format": "table",
@@ -237,7 +237,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+        "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
       },
       "fieldConfig": {
         "defaults": {
@@ -292,7 +292,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+            "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
           },
           "editorMode": "code",
           "format": "table",
@@ -324,7 +324,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+        "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
       },
       "description": "",
       "fieldConfig": {
@@ -407,7 +407,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+            "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
           },
           "editorMode": "code",
           "format": "table",
@@ -439,7 +439,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+        "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
       },
       "fieldConfig": {
         "defaults": {
@@ -522,7 +522,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+            "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
           },
           "editorMode": "code",
           "format": "table",
@@ -554,7 +554,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+        "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
       },
       "fieldConfig": {
         "defaults": {
@@ -611,7 +611,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+            "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
           },
           "editorMode": "code",
           "format": "table",
@@ -643,7 +643,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+        "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
       },
       "fieldConfig": {
         "defaults": {
@@ -700,7 +700,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+            "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
           },
           "editorMode": "code",
           "format": "table",
@@ -732,7 +732,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+        "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
       },
       "fieldConfig": {
         "defaults": {
@@ -788,7 +788,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+            "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
           },
           "editorMode": "code",
           "format": "table",
@@ -820,7 +820,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+        "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
       },
       "fieldConfig": {
         "defaults": {
@@ -828,6 +828,8 @@
             "mode": "continuous-BlPu"
           },
           "mappings": [],
+          "max": 100,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -867,7 +869,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+            "uid": "caaf05af-a8aa-48cb-8c0e-27d79c6ef796"
           },
           "editorMode": "code",
           "format": "table",
@@ -905,13 +907,13 @@
     "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Metricas",
   "uid": "d95d128a-23df-473d-9efb-e00cb2094b20",
-  "version": 4,
+  "version": 2,
   "weekStart": "sunday"
 }

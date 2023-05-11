@@ -31,7 +31,7 @@ clouds = ''
 msg_count = 0
 
 # Agent HTTP Parameters
-agent_host = 'ip172-18-0-22-cheep2ae69v000fenka0-7896.direct.labs.play-with-docker.com'
+agent_host = 'ip172-18-0-36-chehvo81k7jg0084gmsg-7896.direct.labs.play-with-docker.com'
 #agent_host = 'localhost'
 agent_port = 7896
 
