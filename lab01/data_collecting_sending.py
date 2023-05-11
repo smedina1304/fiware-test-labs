@@ -20,45 +20,47 @@ topics = [("/casaipanema50/openweather/temp_c",0),
           ("/casaipanema50/openweather/winddirection",0),
           ("/casaipanema50/openweather/clouds",0)]
 
-# Agent HTTP Parameters
-agent_host = 'ip172-18-0-90-ch99nq81k7jg00c7ts00-80.direct.labs.play-with-docker.com'
-#agent_host = 'localhost'
-agent_port = 80
+# MQTT variables
+temp_c = ''
+humid = ''
+detail_txt = ''
+weather_txt = ''
+windspeed = ''
+winddirection = ''
+clouds = ''
+msg_count = 0
 
-start_send = False
+# Agent HTTP Parameters
+agent_host = 'ip172-18-0-22-cheep2ae69v000fenka0-7896.direct.labs.play-with-docker.com'
+#agent_host = 'localhost'
+agent_port = 7896
+
+start_send = True
 
 # Send - Functions
 def sendCPU():
     t = 10
-    device_id = 'server001'
-    apikey = 'PoyryLab2023'
-    metrics = None
-
-    #url = f"http://{agent_host}:{agent_port}/registry"
-    url = f"http://{agent_host}/registry"
-
-    headers = {"Content-Type": "application/json"}
 
     while True:
         ram = psutil.virtual_memory().percent
         cpu = psutil.cpu_percent()
 
         if start_send:
-            payload = json.dumps({'device_id': f'{device_id}', 'apikey': f'{apikey}', 'metrics': {'cpu':cpu, 'mem':ram}})
-            requests.request("POST", url, headers=headers, data=payload)
+            sendData(key='PoyryLab2023', id='server001', metrics={'cpu':cpu, 'mem':ram})
 
         print(f'# sendCPU (start_send:{start_send}) - [', datetime.now().strftime("%Y-%m-%d %H:%M:%S")  ,'] - metrics: {', f"'cpu':{cpu}, 'mem':{ram}", '}')
         sleep(t)
 
+def sendData(key,id,metrics):
+    #url = f"http://{agent_host}:{agent_port}/iot/json?k={key}&i={id}"
+    url = f"http://{agent_host}/iot/json?k={key}&i={id}"
 
-def sendWeather():
-    t = 15
+    payload = json.dumps(metrics)
+    headers = {"Content-Type": "application/json"}
 
-    while True:
-        print(f'Looping 2 ({t}s)', datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    res = requests.request("POST", url, headers=headers, data=payload)
 
-        sleep(t)
-
+    return res    
 
 # MQTT - Functions
 def connect_mqtt() -> mqtt_client:
@@ -76,21 +78,16 @@ def connect_mqtt() -> mqtt_client:
 
 def subscribe(client: mqtt_client):
 
-    # variables
-    temp_c = ''
-    humid = ''
-    detail_txt = ''
-    weather_txt = ''
-    windspeed = ''
-    winddirection = ''
-    clouds = ''
-
     def on_message(client, userdata, msg):
+        global temp_c, humid, detail_txt, weather_txt, windspeed, winddirection, clouds, start_send, msg_count
+
         val = msg.payload.decode()
         topic = msg.topic
         print(f'# MQTT Received [', datetime.now().strftime("%Y-%m-%d %H:%M:%S")  ,']',
               '(start_send:{start_send})','\n',
               f'>> Topic:`{topic}` = `{val}`')
+        
+        msg_count += 1
         
         if topic.endswith('temp_c'):
             temp_c = val
@@ -107,28 +104,24 @@ def subscribe(client: mqtt_client):
         elif topic.endswith('clouds'):
             clouds = val
 
-        if start_send:
-            metrics = {'temp' : temp_c, 
-                'windspeed' : windspeed, 
-                'winddirection' : winddirection,
-                'humidity' : humid,
-                'clouds': clouds,
-                'description' : detail_txt}
+        print('### Count:', msg_count)
 
-            sendData(key='PoyryWeather2023', id='station001', metrics=metrics)
+        if start_send:
+            if msg_count>=7:
+                msg_count = 0
+                metrics = {'temp' : temp_c, 
+                    'windspeed' : windspeed, 
+                    'winddirection' : winddirection,
+                    'humidity' : humid,
+                    'clouds': clouds,
+                    'description' : detail_txt}
+            
+                sendData(key='PoyryWeather2023', id='station001', metrics=metrics)
+
+                print(f'# sendWeather (sent) - [', datetime.now().strftime("%Y-%m-%d %H:%M:%S")  ,'] - metrics: ',metrics)
 
     client.subscribe(topics)
     client.on_message = on_message
-
-def sendData(key,id,metrics):
-    url = f"http://{agent_host}:{agent_port}/iot/json?k={key}&i={id}"
-
-    payload = json.dumps(metrics)
-    headers = {"Content-Type": "application/json"}
-
-    res = requests.request("POST", url, headers=headers, data=payload)
-
-    return res    
 
 def run_mqtt():
     client = connect_mqtt()
@@ -140,8 +133,8 @@ def run_mqtt():
 if __name__ == "__main__":
 
     # Multiprocessing
-    proc = Process(target=sendCPU)  # instantiating without any argument
-    proc.start()
+    proc1 = Process(target=sendCPU)  # instantiating without any argument
+    proc1.start()
 
     # Default - run_mqtt
     run_mqtt()

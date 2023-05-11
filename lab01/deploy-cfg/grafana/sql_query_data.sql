@@ -30,7 +30,46 @@ ORDER BY "time"
 ------
 
 'temp'
+SELECT
+    UNIX_TIMESTAMP(recvTime) as "time",
+    attrName as "name",
+    CAST(attrValue as decimal) as "temp"
+FROM `urn_ngsi-ld_Station_001_Weather`
+WHERE attrName = "temp"
+ORDER BY "time"
+
 'humidity'
-'pressure'
-'feels_like'
+SELECT
+    UNIX_TIMESTAMP(recvTime) as "time",
+    attrName as "name",
+    CAST(attrValue as decimal) as "humidity"
+FROM `urn_ngsi-ld_Station_001_Weather`
+WHERE attrName = "humidity"
+ORDER BY "time"
+
+'windspeed'
+SELECT
+    UNIX_TIMESTAMP(recvTime) as "time",
+    attrName as "name",
+    CAST(attrValue as decimal) as "windspeed"
+FROM `urn_ngsi-ld_Station_001_Weather`
+WHERE attrName = "windspeed"
+ORDER BY "time"
+
+'winddirection'
+SELECT
+    UNIX_TIMESTAMP(recvTime) as "time",
+    attrName as "name",
+    CAST(attrValue as decimal) as "winddirection"
+FROM `urn_ngsi-ld_Station_001_Weather`
+WHERE attrName = "winddirection"
+ORDER BY "time"
+
 'description'
+SELECT
+    UNIX_TIMESTAMP(recvTime) as "time",
+    attrName as "name",
+    CAST(attrValue as decimal) as "description"
+FROM `urn_ngsi-ld_Station_001_Weather`
+WHERE attrName = "description"
+ORDER BY "time"
