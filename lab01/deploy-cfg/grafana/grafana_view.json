@@ -96,9 +96,11 @@
       "id": 1,
       "options": {
         "legend": {
-          "calcs": [],
-          "displayMode": "table",
-          "placement": "right",
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
           "showLegend": true
         },
         "timezone": [
@@ -389,7 +391,9 @@
       "id": 4,
       "options": {
         "legend": {
-          "calcs": [],
+          "calcs": [
+            "lastNotNull"
+          ],
           "displayMode": "list",
           "placement": "bottom",
           "showLegend": true
@@ -612,7 +616,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\r\n    UNIX_TIMESTAMP(recvTime) as \"time\",\r\n    attrName as \"Atributo\",\r\n    CAST(attrValue as decimal) as \"Valores\"\r\nFROM `urn_ngsi-ld_Station_001_Weather`\r\nWHERE attrName = \"windspeed\"\r\nORDER BY \"time\"",
+          "rawSql": "SELECT\r\n    UNIX_TIMESTAMP(recvTime) as \"time\",\r\n    attrName as \"atributo\",\r\n    CAST(attrValue as decimal) as \"valores\"\r\nFROM `urn_ngsi-ld_Station_001_Weather`\r\nWHERE attrName = \"windspeed\"\r\nORDER BY \"time\"",
           "refId": "A",
           "sql": {
             "columns": [
@@ -812,6 +816,85 @@
       ],
       "title": "Detalhes",
       "type": "state-timeline"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlPu"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 18,
+        "y": 16
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.5.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "f8c3679c-af13-447e-b193-ade365891a09"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    UNIX_TIMESTAMP(recvTime) as \"time\",\r\n    attrName as \"Atributo\",\r\n    CAST(attrValue as decimal) as \"Valores\"\r\nFROM `urn_ngsi-ld_Station_001_Weather`\r\nWHERE attrName = \"clouds\"\r\nORDER BY \"time\"",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Nuvens",
+      "type": "stat"
     }
   ],
   "refresh": "5s",
@@ -822,13 +905,13 @@
     "list": []
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Metricas",
   "uid": "d95d128a-23df-473d-9efb-e00cb2094b20",
-  "version": 3,
+  "version": 4,
   "weekStart": "sunday"
 }
