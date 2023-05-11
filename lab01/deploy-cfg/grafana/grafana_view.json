@@ -25,7 +25,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "e4a92545-4278-42cd-95a9-76e9c91ee4f4"
+        "uid": "a410b4d7-de26-4ca1-a848-9897e893bf3c"
       },
       "description": "",
       "fieldConfig": {
@@ -74,8 +74,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -88,8 +87,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 11,
-        "w": 24,
+        "h": 10,
+        "w": 20,
         "x": 0,
         "y": 0
       },
@@ -115,7 +114,7 @@
           "dataset": "poyry",
           "datasource": {
             "type": "mysql",
-            "uid": "e4a92545-4278-42cd-95a9-76e9c91ee4f4"
+            "uid": "a410b4d7-de26-4ca1-a848-9897e893bf3c"
           },
           "editorMode": "code",
           "format": "time_series",
@@ -148,7 +147,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "e4a92545-4278-42cd-95a9-76e9c91ee4f4"
+        "uid": "a410b4d7-de26-4ca1-a848-9897e893bf3c"
       },
       "fieldConfig": {
         "defaults": {
@@ -162,8 +161,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "#EAB839",
@@ -180,10 +178,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 5,
         "w": 4,
-        "x": 0,
-        "y": 11
+        "x": 20,
+        "y": 0
       },
       "id": 2,
       "options": {
@@ -203,7 +201,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "e4a92545-4278-42cd-95a9-76e9c91ee4f4"
+            "uid": "a410b4d7-de26-4ca1-a848-9897e893bf3c"
           },
           "editorMode": "code",
           "format": "table",
@@ -235,7 +233,7 @@
     {
       "datasource": {
         "type": "mysql",
-        "uid": "e4a92545-4278-42cd-95a9-76e9c91ee4f4"
+        "uid": "a410b4d7-de26-4ca1-a848-9897e893bf3c"
       },
       "fieldConfig": {
         "defaults": {
@@ -249,8 +247,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "#EAB839",
@@ -267,10 +264,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 5,
         "w": 4,
-        "x": 4,
-        "y": 11
+        "x": 20,
+        "y": 5
       },
       "id": 3,
       "options": {
@@ -290,7 +287,7 @@
         {
           "datasource": {
             "type": "mysql",
-            "uid": "e4a92545-4278-42cd-95a9-76e9c91ee4f4"
+            "uid": "a410b4d7-de26-4ca1-a848-9897e893bf3c"
           },
           "editorMode": "code",
           "format": "table",
@@ -335,6 +332,6 @@
   "timezone": "browser",
   "title": "Metricas CPU",
   "uid": "d95d128a-23df-473d-9efb-e00cb2094b20",
-  "version": 2,
+  "version": 3,
   "weekStart": "sunday"
 }

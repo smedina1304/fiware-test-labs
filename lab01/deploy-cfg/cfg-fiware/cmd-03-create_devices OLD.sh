@@ -32,6 +32,8 @@ curl --location 'http://localhost:4041/iot/devices' \
             "device_id": "station001",
             "entity_name": "urn:ngsi-ld:Station:001",
             "entity_type": "Weather",
+            "transport": "HTTP",
+            "endpoint": "http://sensor-provider:80/command",
             "attributes": [
                 {
                     "object_id": "temp",
@@ -39,13 +41,13 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Decimal"
                 },
                 {
-                    "object_id": "windspeed",
-                    "name": "windspeed",
+                    "object_id": "feels_like",
+                    "name": "feels_like",
                     "type": "Decimal"
                 },
                 {
-                    "object_id": "winddirection",
-                    "name": "winddirection",
+                    "object_id": "pressure",
+                    "name": "pressure",
                     "type": "Decimal"
                 },
                 {
@@ -54,14 +56,19 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Decimal"
                 },
                 {
-                    "object_id": "clouds",
-                    "name": "clouds",
-                    "type": "Decimal"
-                },
-                {
                     "object_id": "description",
                     "name": "description",
                     "type": "String"
+                }
+            ],
+            "commands": [
+                {
+                    "name": "switch",
+                    "type": "command"
+                },
+                {
+                    "name": "interval",
+                    "type": "command"
                 }
             ],
             "static_attributes": [

@@ -25,3 +25,12 @@ SELECT
 FROM `urn_ngsi-ld_Server_001_Computer`
 WHERE attrName = "memory"
 ORDER BY "time" 
+
+
+------
+
+'temp'
+'humidity'
+'pressure'
+'feels_like'
+'description'

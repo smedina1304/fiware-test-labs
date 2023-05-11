@@ -23,9 +23,10 @@ curl --location 'http://localhost:1026/v2/subscriptions/' \
         },
         "attrs": [
             "temp",
-            "feels_like",
-            "pressure",
+            "windspeed",
+            "winddirection",
             "humidity",
+            "clouds",
             "description"
         ]
     },
