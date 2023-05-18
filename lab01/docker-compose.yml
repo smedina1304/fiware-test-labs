@@ -92,21 +92,7 @@ services:
     healthcheck:
       interval: 10s
 
-  # sensor-provider: # Context provider example. Build using flask
-  #   build: ./sensor-provider # Build this image from the ./context-providerfolder
-  #   hostname: sensor-provider
-  #   container_name: sensor-provider
-  #   depends_on:
-  #     - orion
-  #   volumes:
-  #     - ./sensor-provider:/code
-  #   expose: # Expose this port to the network
-  #     - "80"
-  #   ports: # Match port 6000 from the container to the localhost
-  #     - "80:80"
-  #   networks: # Include this container in the default network
-  #     - default
-
+  # Persistence Data Base
   cygnus:
     image: fiware/cygnus-ngsi:2.16.0
     hostname: cygnus
