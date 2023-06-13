@@ -35,12 +35,16 @@ msg_count = 0
 agent_host = 'localhost'
 agent_port = 7896
 
-labs_docker = 'ip172-18-0-31-chf6ano1k7jg009tck10'
+ip_labs_docker = 'ip172-18-0-63-chrkj2bqes6000dl8dc0'
 
-if labs_docker is not None:
-    agent_host = f'{labs_docker}-{agent_port}.direct.labs.play-with-docker.com'
+if ip_labs_docker is not None:
+    agent_host = f'{ip_labs_docker}-{agent_port}.direct.labs.play-with-docker.com'
 
 start_send = True
+
+# Calc List >> AVG 
+def listAVG(lst):
+    return sum(lst) / len(lst)
 
 # Send - Functions
 def sendCPU():
@@ -49,6 +53,7 @@ def sendCPU():
     while True:
         ram = psutil.virtual_memory().percent
         cpu = psutil.cpu_percent()
+        #cpu = listAVG(psutil.cpu_percent(interval=1, percpu=True))
 
         if start_send:
             sendData(key='PoyryLab2023', id='server001', metrics={'cpu':cpu, 'mem':ram})
@@ -64,6 +69,7 @@ def sendData(key,id,metrics):
     headers = {"Content-Type": "application/json"}
 
     res = requests.request("POST", url, headers=headers, data=payload)
+    res = None
 
     return res    
 
