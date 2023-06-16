@@ -2,6 +2,7 @@
 lab02/scada-lts/views/~$*.*
 
 # Database
+lab01/db/
 lab02/scada-lts/db/
 
 # Byte-compiled / optimized / DLL files

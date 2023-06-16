@@ -35,7 +35,8 @@ msg_count = 0
 agent_host = 'localhost'
 agent_port = 7896
 
-ip_labs_docker = 'ip172-18-0-63-chrkj2bqes6000dl8dc0'
+ip_labs_docker = None
+#ip_labs_docker = 'ip172-18-0-63-chrkj2bqes6000dl8dc0'
 
 if ip_labs_docker is not None:
     agent_host = f'{ip_labs_docker}-{agent_port}.direct.labs.play-with-docker.com'
