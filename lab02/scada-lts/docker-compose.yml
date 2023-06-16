@@ -40,8 +40,8 @@ services:
       - mysql-db:database      
     expose:
       - "8080:8000"
-    volumes:
-      - ./db/tomcat/log:/usr/local/tomcat/logs
+    # volumes:
+    #   - ./db/tomcat/log:/usr/local/tomcat/logs
     networks:
       - default
     command:
