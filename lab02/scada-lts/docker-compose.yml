@@ -8,7 +8,7 @@ services:
     restart: always
     image: mysql:5.7
     hostname: mysql-db
-    container_name: db-mysql
+    container_name: mysql-db
     expose:
       - "3306"
     ports:
@@ -22,7 +22,7 @@ services:
       # - "MYSQL_PASSWORD=123"
       - "MYSQL_DATABASE=scadalts"
     volumes:
-      - ./db/mysql/data:/var/lib/mysql
+      - ./db/mysql/data:/var/lib/mysql:ro
       #- ./db/mysql/conf:/etc/mysql:ro
     command: --log_bin_trust_function_creators=1
 
@@ -40,8 +40,8 @@ services:
       - mysql-db:database      
     expose:
       - "8080:8000"
-    # volumes:
-    #   - ./db/tomcat/log:/usr/local/tomcat/logs
+    volumes:
+      - ./db/tomcat/log:/usr/local/tomcat/logs:rw
     networks:
       - default
     command:
