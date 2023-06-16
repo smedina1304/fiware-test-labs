@@ -14,7 +14,7 @@ services:
     ports:
       - "3306:3306" # localhost:3306
     networks:
-      - default
+      - mynetwork
     environment:
       - "MYSQL_ROOT_PASSWORD=root"
       - "MYSQL_ROOT_HOST=%"
@@ -43,7 +43,7 @@ services:
     volumes:
       - ./db/tomcat/log:/usr/local/tomcat/logs:rw
     networks:
-      - default
+      - mynetwork
     command:
       - /usr/bin/wait-for-it
       - --host=mysql-db
