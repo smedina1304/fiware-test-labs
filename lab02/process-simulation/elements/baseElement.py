@@ -3,7 +3,7 @@
 #
 
 # [START import_module]
-
+import paho.mqtt.client as paho
 # [END import_module]
 
 
@@ -124,5 +124,44 @@ class BaseElement:
         except KeyError:
             return None
 
+    def publishMQTT(self, mqtt_client:paho.Client=None, mqtt_prefix=None):
+        """
+        Metodo publishMQTT
+
+        Utilizado para atualizar os atributos e status do elemento 
+        em um o servidor MQTT definido
+
+        OBS: IMPORTANTE - É necessário que existe o atributo 'NAME'
+        para o elemento, pois é utilizado na composição do Tópico.
+
+        Parametros:
+        - mqtt_client: Classe de conexão com o Server MQTT
+        - mqtt_prefix: Prefixo do Tópico que receberá o valor
+        """        
+        sentData = {}
+        if ((mqtt_client is not None) and
+            (mqtt_prefix is not None)):
+            name = self.getAttribute(id='NAME')
+
+            # Atributos
+            attrs = list(self.getAttributes().keys())[1:]
+            for attr in attrs:
+                topic = f"{mqtt_prefix}/{name}/{attr}"
+                value = str(self.getAttribute(id=attr))
+                mqtt_client.publish(topic, value)
+                sentData[topic] = value
+
+            # Status
+            topic = f"{mqtt_prefix}/{name}/STATUS.ID"
+            value = str(self.getStatus()[0])
+            mqtt_client.publish(topic, value)
+            sentData[topic] = value
+
+            topic = f"{mqtt_prefix}/{name}/STATUS.DESC"
+            value = str(self.getStatus()[1])
+            mqtt_client.publish(topic, value)
+            sentData[topic] = value
+
+        return sentData
 
 # [END - Class]

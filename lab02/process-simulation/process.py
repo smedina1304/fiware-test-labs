@@ -117,7 +117,7 @@ class ProcessSimulation():
                   'TEMPERATURE',':',temp,'C°\n',
                   'TEMP.LOW',':',tempLow,'C°\n',
                   'TEMP.HIGH',':',tempHigh,'C°\n',
-                  'LEVEL',':',tank.getAttribute(id='LEVEL'),f'({level})','\n',
+                  'LEVEL',':',tank.getAttribute(id='LEVEL'),f'- VOLUME: {level}','\n',
                   'LEVEL.LOW',':',tank.getAttribute(id='LEVEL.LOW'),f'({levelLow})','\n',
                   'LEVEL.HIGH',':',tank.getAttribute(id='LEVEL.HIGH'),f'({levelHigh})','\n',
                   )
@@ -147,13 +147,13 @@ class ProcessSimulation():
                 if level >= levelHigh:
                     tank.setStatus(id=0) # TO WAITING
                     self.ciclosTqFill = 0
-                elif ((level <= (levelLow*3)) and
+                elif ((level >= (levelLow*3)) and
                       (self.ciclosTqFill>=self.ciclosTqFillMax) and
                       (temp >= tempHigh)):
                     tank.setStatus(id=3) # TO COOLING
                     self.ciclosTqFill = 0
                     self.ciclosTqColl = 0
-                elif ((level <= (levelLow*3)) and
+                elif ((level >= (levelLow*3)) and
                       (self.ciclosTqFill>=self.ciclosTqFillMax) and
                       (temp < tempHigh)):
                     tank.setStatus(id=0) # TO WAITING
@@ -164,6 +164,7 @@ class ProcessSimulation():
                     newLevel = int(((level + addLiters)/capacity)*100)
                     newTemp  = round(((addLiters*addTemp)+(level*temp))/(addLiters+level),2)
                     tank.setAttribute(id='LEVEL' , value=newLevel)
+                    tank.setAttribute(id='VOLUME' , value=round((level + addLiters), 2))
                     tank.setAttribute(id='TEMPERATURE' , value=newTemp)
                     print('FILLING:', 
                         'addLiters=',addLiters,' ; ',
