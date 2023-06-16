@@ -11,6 +11,7 @@ from paho.mqtt import client as mqtt_client
 # MQTT Parameters
 broker = '192.168.0.130'
 port = 1883
+
 client_id = f'python-mqtt-{random.randint(0, 100)}' # generate client ID with pub prefix randomly
 topics = [("/casaipanema50/openweather/temp_c",0),
           ("/casaipanema50/openweather/humid",0),
@@ -63,8 +64,12 @@ def sendCPU():
         sleep(t)
 
 def sendData(key,id,metrics):
-    #url = f"http://{agent_host}:{agent_port}/iot/json?k={key}&i={id}"
-    url = f"http://{agent_host}/iot/json?k={key}&i={id}"
+    url = None
+    if ip_labs_docker is not None:
+        url = f"http://{agent_host}/iot/json?k={key}&i={id}"
+    else:
+        url = f"http://{agent_host}:{agent_port}/iot/json?k={key}&i={id}"
+
 
     payload = json.dumps(metrics)
     headers = {"Content-Type": "application/json"}
