@@ -22,7 +22,7 @@ services:
       # - "MYSQL_PASSWORD=123"
       - "MYSQL_DATABASE=scadalts"
     volumes:
-      - ./db/mysql/data:/var/lib/mysql:rw
+      - ./db/mysql/data:/var/lib/mysql
       #- ./db/mysql/conf:/etc/mysql:ro
     command: --log_bin_trust_function_creators=1
 
@@ -41,7 +41,7 @@ services:
     expose:
       - "8080:8000"
     volumes:
-      - ./db/tomcat/log:/usr/local/tomcat/logs:rw
+      - ./db/tomcat/log:/usr/local/tomcat/logs
     networks:
       - default
     command:
