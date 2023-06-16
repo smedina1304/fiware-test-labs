@@ -15,6 +15,9 @@ class Tank(BaseElement):
 
     Abstração do elemento Tanque do processo industrial.
     
+    Volume Calc: 
+    https://www.calculatorsoup.com/calculators/construction/tank.php
+    
     by Sérgio C. Medina
     """
 
@@ -22,11 +25,16 @@ class Tank(BaseElement):
     def __init__(self):
        super().__init__(
            dictAttributes={
-                'LEVEL' : 0,
-                'LEVEL.HIGH' : 0,
-                'LEVEL.LOW' : 0,
-                'LITERS' : 0,
-                'TEMPERATURE' : 0
+               'NAME' : '',
+               'LEVEL' : 0,
+               'LEVEL.HIGH' : 0,
+               'LEVEL.LOW' : 0,
+               'VOLUME' : 0,
+               'CAPACITY' : 0,
+               'CAPACITY.UNIT' : None,
+               'TEMPERATURE' : 0,
+               'TEMP.HIGH' : 0,
+               'TEMP.LOW' : 0
            }, 
            dictStatus={
                 0 : 'WAITING',
@@ -38,7 +46,6 @@ class Tank(BaseElement):
                 6 : 'BLOCKED'
            }
        )
-       print() 
 
 
 # [END - Class]

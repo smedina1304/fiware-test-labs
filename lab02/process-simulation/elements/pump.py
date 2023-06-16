@@ -29,8 +29,5 @@ class Pump(BaseElement):
                 1 : 'ON'
            }
        )
-       print() 
-
-
 
 # [END - Class]

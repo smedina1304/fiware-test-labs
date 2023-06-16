@@ -1,5 +1,8 @@
 # MS Power Point Temp Files
-lab02/scada-tela/~$*.*
+lab02/scada-lts/views/~$*.*
+
+# Database
+lab02/scada-lts/db/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

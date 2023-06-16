@@ -29,8 +29,6 @@ class Valve(BaseElement):
                 1 : 'OPENED'
            }
        )
-       print() 
-
 
 
 # [END - Class]

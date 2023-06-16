@@ -91,17 +91,17 @@ class BaseElement:
         return self.__stlist
         
 
-    def getStatus(self, id):
+    def getStatus(self):
         """
         Metodo getStatus
 
         Utilizado para retornar o valor do status
 
         Parametros:
-        - id: 'String' de identificação do status
+        - None
         """
         try:
-            return self.__stlist[id]
+            return self.__status, self.__stlist[self.__status]
         except KeyError:
             return None
 
@@ -117,9 +117,9 @@ class BaseElement:
         """
         try:
             if id in self.__stlist.keys():
-                self.__status = self.__stlist[id]
+                self.__status = id
             else:
-                print(f'Method setStatus: Key Error {id} not exists!')
+                print(f'Method setStatus: Key Error "{id}" not exists!')
                 raise(KeyError)
         except KeyError:
             return None

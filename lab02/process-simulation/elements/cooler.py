@@ -28,7 +28,6 @@ class Cooler(BaseElement):
                 1 : 'COOLING'
            }
        )
-       print() 
 
 
 # [END - Class]
