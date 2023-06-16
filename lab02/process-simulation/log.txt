@@ -1,0 +1,3198 @@
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (0, 'WAITING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 0 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 0 (0.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 0 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 0 (0.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 0  ;  level= 0.0  ;  capacity= 35000  ;  temp= 0  ;  newTemp= 64.1 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 64.1 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 0 (0.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 280.0  ;  newLevel= 0  ;  level= 0.0  ;  capacity= 35000  ;  temp= 64.1  ;  newTemp= 78.9 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 78.9 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 0 (0.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 350.0  ;  newLevel= 1  ;  level= 0.0  ;  capacity= 35000  ;  temp= 78.9  ;  newTemp= 62.7 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 62.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 1 (350.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 1  ;  level= 350.0  ;  capacity= 35000  ;  temp= 62.7  ;  newTemp= 63.69 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 63.69 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 1 (350.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 1  ;  level= 350.0  ;  capacity= 35000  ;  temp= 63.69  ;  newTemp= 69.17 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 69.17 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 1 (350.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 2  ;  level= 350.0  ;  capacity= 35000  ;  temp= 69.17  ;  newTemp= 77.75 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 77.75 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 2 (700.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 3  ;  level= 700.0  ;  capacity= 35000  ;  temp= 77.75  ;  newTemp= 71.84 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 71.84 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 3 (1050.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 280.0  ;  newLevel= 3  ;  level= 1050.0  ;  capacity= 35000  ;  temp= 71.84  ;  newTemp= 72.53 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 72.53 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 3 (1050.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 280.0  ;  newLevel= 3  ;  level= 1050.0  ;  capacity= 35000  ;  temp= 72.53  ;  newTemp= 70.0 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 70.0 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 3 (1050.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 4  ;  level= 1050.0  ;  capacity= 35000  ;  temp= 70.0  ;  newTemp= 68.97 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 68.97 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 4 (1400.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 4  ;  level= 1400.0  ;  capacity= 35000  ;  temp= 68.97  ;  newTemp= 68.11 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 68.11 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 4 (1400.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 280.0  ;  newLevel= 4  ;  level= 1400.0  ;  capacity= 35000  ;  temp= 68.11  ;  newTemp= 71.08 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 71.08 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 4 (1400.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 385.0  ;  newLevel= 5  ;  level= 1400.0  ;  capacity= 35000  ;  temp= 71.08  ;  newTemp= 70.03 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 70.03 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 5 (1750.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 350.0  ;  newLevel= 6  ;  level= 1750.0  ;  capacity= 35000  ;  temp= 70.03  ;  newTemp= 68.64 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 68.64 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 6 (2100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 7  ;  level= 2100.0  ;  capacity= 35000  ;  temp= 68.64  ;  newTemp= 68.3 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 68.3 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 7 (2450.0000000000005) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 7  ;  level= 2450.0000000000005  ;  capacity= 35000  ;  temp= 68.3  ;  newTemp= 69.55 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 69.55 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 7 (2450.0000000000005) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 8  ;  level= 2450.0000000000005  ;  capacity= 35000  ;  temp= 69.55  ;  newTemp= 69.21 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 69.21 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 8 (2800.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 8  ;  level= 2800.0  ;  capacity= 35000  ;  temp= 69.21  ;  newTemp= 69.22 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 69.22 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 8 (2800.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 9  ;  level= 2800.0  ;  capacity= 35000  ;  temp= 69.22  ;  newTemp= 68.93 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 68.93 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 9 (3150.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 9  ;  level= 3150.0  ;  capacity= 35000  ;  temp= 68.93  ;  newTemp= 70.4 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 70.4 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 9 (3150.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 280.0  ;  newLevel= 9  ;  level= 3150.0  ;  capacity= 35000  ;  temp= 70.4  ;  newTemp= 69.67 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 69.67 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 9 (3150.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 9  ;  level= 3150.0  ;  capacity= 35000  ;  temp= 69.67  ;  newTemp= 70.28 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 70.28 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 9 (3150.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 385.0  ;  newLevel= 10  ;  level= 3150.0  ;  capacity= 35000  ;  temp= 70.28  ;  newTemp= 70.89 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 70.89 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 10 (3500.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 10  ;  level= 3500.0  ;  capacity= 35000  ;  temp= 70.89  ;  newTemp= 70.25 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 70.25 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 10 (3500.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 11  ;  level= 3500.0  ;  capacity= 35000  ;  temp= 70.25  ;  newTemp= 71.19 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 71.19 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 11 (3850.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 11  ;  level= 3850.0  ;  capacity= 35000  ;  temp= 71.19  ;  newTemp= 72.17 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 72.17 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 11 (3850.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 12  ;  level= 3850.0  ;  capacity= 35000  ;  temp= 72.17  ;  newTemp= 73.87 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 73.87 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 12 (4200.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 13  ;  level= 4200.0  ;  capacity= 35000  ;  temp= 73.87  ;  newTemp= 73.81 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 73.81 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 280.0  ;  newLevel= 13  ;  level= 4550.0  ;  capacity= 35000  ;  temp= 73.81  ;  newTemp= 74.64 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 74.64 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 74.64 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 74.64  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 74.29 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 74.29  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 73.94 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 73.94  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 73.59 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 73.59  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 73.24 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 73.24  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 72.89 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 72.89  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 72.54 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 72.54  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 72.19 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 72.19  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 71.84 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 71.84  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 71.49 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 71.49  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 71.14 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 71.14  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 70.79 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 70.79  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 70.44 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 70.44  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 70.09 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 70.09  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 69.74 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 69.74  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 69.39 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 69.39  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 69.04 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 69.04  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 68.69 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 68.69  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 68.34 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 68.34  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 67.99 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 67.99  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 67.64 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 67.64  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 67.29 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 67.29  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.94 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 66.94  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.59 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 66.59  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.24 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 66.24  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 65.89 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 65.89  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 65.54 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 65.54  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 65.19 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 65.19  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 64.84 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 64.84  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 64.49 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 64.49  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 64.14 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 64.14  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 63.79 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 63.79  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 63.44 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 63.44  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 63.09 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 63.09  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 62.74 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 62.74  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 62.39 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 62.39  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 62.04 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 62.04  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 61.69 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 61.69  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 61.34 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 61.34  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 60.99 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 60.99  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 60.64 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 60.64  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 60.29 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 60.29  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 59.94 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 59.94  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 59.59 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 59.59  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 59.24 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 59.24  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 58.89 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 58.89  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 58.54 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 58.54  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 58.19 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 58.19  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 57.84 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 57.84  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 57.49 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 57.49  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 57.14 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 57.14  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 56.79 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 56.79  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 56.44 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 56.44  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 56.09 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 56.09  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 55.74 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 55.74  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 55.39 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 55.39  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 55.04 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 55.04  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 54.69 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 54.69  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 54.34 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 54.34  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 53.99 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 53.99  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 53.64 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 53.64  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 53.29 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 53.29  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 52.94 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 52.94  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 52.59 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 52.59  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 52.24 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 52.24  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 51.89 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 51.89  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 51.54 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 51.54  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 51.19 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 51.19  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 50.84 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 50.84  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 50.49 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 50.49  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 50.14 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 50.14  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 49.79 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 49.79  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 49.44 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 49.44  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 49.09 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 49.09  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 48.74 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 48.74  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 48.39 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 48.39  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 48.04 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 48.04  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 47.69 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 47.69  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 47.34 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 47.34  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 46.99 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 46.99  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 46.64 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 46.64  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 46.29 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 46.29  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 45.94 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 45.94  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 45.59 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 45.59  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 45.24 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 45.24  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 44.89 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 44.89  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 44.54 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 44.54  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 44.19 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 44.19  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 43.84 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 43.84  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 43.49 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 43.49  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 43.14 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 43.14  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 42.79 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 42.79  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 42.44 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 42.44  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 42.09 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 42.09  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.74 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (0, 'WAITING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.74 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.74 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 13 (4550.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 350.0  ;  newLevel= 14  ;  level= 4550.0  ;  capacity= 35000  ;  temp= 41.74  ;  newTemp= 43.17 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 43.17 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 14 (4900.000000000001) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 15  ;  level= 4900.000000000001  ;  capacity= 35000  ;  temp= 43.17  ;  newTemp= 46.67 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 46.67 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 15 (5250.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 350.0  ;  newLevel= 16  ;  level= 5250.0  ;  capacity= 35000  ;  temp= 46.67  ;  newTemp= 48.28 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 48.28 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 16 (5600.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 16  ;  level= 5600.0  ;  capacity= 35000  ;  temp= 48.28  ;  newTemp= 49.01 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 49.01 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 16 (5600.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 350.0  ;  newLevel= 17  ;  level= 5600.0  ;  capacity= 35000  ;  temp= 49.01  ;  newTemp= 50.66 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 50.66 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 17 (5950.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 17  ;  level= 5950.0  ;  capacity= 35000  ;  temp= 50.66  ;  newTemp= 51.61 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 51.61 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 17 (5950.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 280.0  ;  newLevel= 17  ;  level= 5950.0  ;  capacity= 35000  ;  temp= 51.61  ;  newTemp= 52.48 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 52.48 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 17 (5950.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 385.0  ;  newLevel= 18  ;  level= 5950.0  ;  capacity= 35000  ;  temp= 52.48  ;  newTemp= 54.28 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 54.28 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 18 (6300.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 18  ;  level= 6300.0  ;  capacity= 35000  ;  temp= 54.28  ;  newTemp= 54.7 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 54.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 18 (6300.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 18  ;  level= 6300.0  ;  capacity= 35000  ;  temp= 54.7  ;  newTemp= 55.22 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 55.22 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 18 (6300.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 280.0  ;  newLevel= 18  ;  level= 6300.0  ;  capacity= 35000  ;  temp= 55.22  ;  newTemp= 55.67 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 55.67 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 18 (6300.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 18  ;  level= 6300.0  ;  capacity= 35000  ;  temp= 55.67  ;  newTemp= 56.9 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 56.9 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 18 (6300.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 385.0  ;  newLevel= 19  ;  level= 6300.0  ;  capacity= 35000  ;  temp= 56.9  ;  newTemp= 58.48 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 58.48 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 19 (6650.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 20  ;  level= 6650.0  ;  capacity= 35000  ;  temp= 58.48  ;  newTemp= 59.57 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 59.57 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 20 (7000.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 385.0  ;  newLevel= 21  ;  level= 7000.0  ;  capacity= 35000  ;  temp= 59.57  ;  newTemp= 59.74 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 59.74 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 21 (7350.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 21  ;  level= 7350.0  ;  capacity= 35000  ;  temp= 59.74  ;  newTemp= 60.49 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 60.49 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 21 (7350.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 21  ;  level= 7350.0  ;  capacity= 35000  ;  temp= 60.49  ;  newTemp= 60.69 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 60.69 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 21 (7350.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 21  ;  level= 7350.0  ;  capacity= 35000  ;  temp= 60.69  ;  newTemp= 61.2 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 61.2 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 21 (7350.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 21  ;  level= 7350.0  ;  capacity= 35000  ;  temp= 61.2  ;  newTemp= 62.22 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 62.22 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 21 (7350.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 22  ;  level= 7350.0  ;  capacity= 35000  ;  temp= 62.22  ;  newTemp= 63.51 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 63.51 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 22 (7700.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 22  ;  level= 7700.0  ;  capacity= 35000  ;  temp= 63.51  ;  newTemp= 64.46 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 64.46 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 22 (7700.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 385.0  ;  newLevel= 23  ;  level= 7700.0  ;  capacity= 35000  ;  temp= 64.46  ;  newTemp= 64.69 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 64.69 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 23 (8050.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 420.0  ;  newLevel= 24  ;  level= 8050.0  ;  capacity= 35000  ;  temp= 64.69  ;  newTemp= 65.68 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 65.68 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 24 (8400.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 24  ;  level= 8400.0  ;  capacity= 35000  ;  temp= 65.68  ;  newTemp= 66.04 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.04 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 24 (8400.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 245.0  ;  newLevel= 24  ;  level= 8400.0  ;  capacity= 35000  ;  temp= 66.04  ;  newTemp= 66.36 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.36 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 24 (8400.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 385.0  ;  newLevel= 25  ;  level= 8400.0  ;  capacity= 35000  ;  temp= 66.36  ;  newTemp= 66.09 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.09 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 25 (8750.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 315.0  ;  newLevel= 25  ;  level= 8750.0  ;  capacity= 35000  ;  temp= 66.09  ;  newTemp= 66.55 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.55 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 25 (8750.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 350.0  ;  newLevel= 26  ;  level= 8750.0  ;  capacity= 35000  ;  temp= 66.55  ;  newTemp= 66.76 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.76 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+FILLING: addLiters= 280.0  ;  newLevel= 26  ;  level= 9100.0  ;  capacity= 35000  ;  temp= 66.76  ;  newTemp= 66.9 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (2, 'FILLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.9 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.9 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 66.9  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.55 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 66.55  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 66.2 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 66.2  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 65.85 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 65.85  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 65.5 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 65.5  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 65.15 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 65.15  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 64.8 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 64.8  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 64.45 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 64.45  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 64.1 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 64.1  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 63.75 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 63.75  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 63.4 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 63.4  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 63.05 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 63.05  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 62.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 62.7  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 62.35 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 62.35  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 62.0 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 62.0  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 61.65 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 61.65  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 61.3 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 61.3  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 60.95 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 60.95  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 60.6 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 60.6  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 60.25 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 60.25  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 59.9 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 59.9  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 59.55 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 59.55  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 59.2 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 59.2  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 58.85 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 58.85  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 58.5 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 58.5  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 58.15 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 58.15  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 57.8 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 57.8  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 57.45 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 57.45  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 57.1 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 57.1  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 56.75 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 56.75  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 56.4 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 56.4  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 56.05 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 56.05  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 55.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 55.7  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 55.35 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 55.35  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 55.0 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 55.0  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 54.65 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 54.65  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 54.3 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 54.3  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 53.95 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 53.95  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 53.6 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 53.6  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 53.25 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 53.25  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 52.9 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 52.9  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 52.55 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 52.55  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 52.2 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 52.2  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 51.85 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 51.85  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 51.5 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 51.5  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 51.15 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 51.15  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 50.8 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 50.8  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 50.45 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 50.45  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 50.1 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 50.1  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 49.75 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 49.75  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 49.4 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 49.4  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 49.05 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 49.05  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 48.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 48.7  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 48.35 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 48.35  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 48.0 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 48.0  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 47.65 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 47.65  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 47.3 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 47.3  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 46.95 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 46.95  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 46.6 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 46.6  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 46.25 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 46.25  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 45.9 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 45.9  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 45.55 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 45.55  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 45.2 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 45.2  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 44.85 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 44.85  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 44.5 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 44.5  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 44.15 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 44.15  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 43.8 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 43.8  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 43.45 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 43.45  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 43.1 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 43.1  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 42.75 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 42.75  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 42.4 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 42.4  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 42.05 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+COOLING: temp= 42.05  ;  degrees= 0.35  ;  tempLow= 35  ;  tempHigh= 42 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (3, 'COOLING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (0, 'WAITING') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+
+# TANK [simulationTankBuffer] - NAME: TQ1
+>> TANK [TQ1] - Dados: 
+ STATUS : (1, 'AVAILABLE') 
+ CAPACITY : 35000 
+ TEMPERATURE : 41.7 C°
+ TEMP.LOW : 35 C°
+ TEMP.HIGH : 42 C°
+ LEVEL : 26 (9100.0) 
+ LEVEL.LOW : 10 (3500.0) 
+ LEVEL.HIGH : 90 (31500.0) 
+

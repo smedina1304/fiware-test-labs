@@ -6,6 +6,8 @@
 import time
 import random
 
+import paho.mqtt.client as paho
+
 from elements.tank import Tank
 from elements.valve import Valve
 from elements.pump import Pump
@@ -23,7 +25,11 @@ class ProcessSimulation():
     """
 
     # [METHOD - Constrution]
-    def __init__(self):
+    def __init__(self,mqtt_client=None, mqtt_prefix=None):
+
+        # MQTT
+        self.mqtt_client = mqtt_client
+        self.mqtt_prefix = mqtt_prefix
         
         # Tanks
         self.tank_1 = Tank()
@@ -86,6 +92,8 @@ class ProcessSimulation():
 
         # TANK 1
         self.simulationTankBuffer(self.tank_1)
+        sentData = self.tank_1.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+        print('## MQTT', self.tank_1.getAttribute(id='NAME'), ":\n", sentData)
 
     def simulationTankBuffer(self, tank: Tank):
 
@@ -188,14 +196,42 @@ class ProcessSimulation():
                         'tempHigh=',tempHigh, '\n'
                         )
 
+# MQTT
+def on_connect(client, userdata, flags, rc):
+
+    if rc == 0:
+        print("# MQTT - Connected to broker!")
+    else:
+        print("# MQTT - Connection failed - ERROR!")
+
+
 # Main
 if __name__ == "__main__":
-    process = ProcessSimulation()
 
+    # Define parameters
+    mqtt_broker = 'broker.hivemq.com'
+    mqtt_port = 1883
 
-    for i in range(200):
-        process.simulationLogic()
-        time.sleep(5)
+    # MQTT broker
+    client = paho.Client("MyProcessSimulation")         #create new instance
+    #client.username_pw_set(user, password=password)    #set username and password
+    client.on_connect= on_connect                       #attach function to callback
+    client.connect(host=mqtt_broker, port=mqtt_port)    #connect to broker
+
+    client.loop_start()
+
+    # Simulação
+    process = ProcessSimulation(mqtt_client=client, mqtt_prefix='scadalts/sm')
+
+    try:
+        for i in range(250):
+            process.simulationLogic()
+            time.sleep(5)
+    except KeyboardInterrupt:
+        print("### Interrupted process! ###")
+        client.disconnect()
+        client.loop_stop()
+    
 
 
 
