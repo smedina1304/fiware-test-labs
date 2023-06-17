@@ -14,7 +14,9 @@ services:
     ports:
       - "3306:3306" # localhost:3306
     networks:
-      - default
+      appnet:
+        aliases:
+          - "database"
     environment:
       - "MYSQL_ROOT_PASSWORD=root"
       - "MYSQL_ROOT_HOST=%"
@@ -36,14 +38,14 @@ services:
       - "8080:8080"
     depends_on:
       - mysql-db
-    links:
-      - mysql-db:database      
+    # links:
+    #   - mysql-db:database      
     expose:
       - "8080:8000"
     volumes:
       - ./db/tomcat/log:/usr/local/tomcat/logs:rw
     networks:
-      - default
+      - appnet
     command:
       - /usr/bin/wait-for-it
       - --host=mysql-db
@@ -53,3 +55,7 @@ services:
       - --
       - /usr/local/tomcat/bin/catalina.sh
       - run
+
+networks:
+  appnet:
+    driver: bridge
