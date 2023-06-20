@@ -34,8 +34,8 @@ class ProcessSimulation():
         # Tanks
         self.tank_1 = Tank()
         self.tank_1.setAttribute(id='NAME' , value='TQ1')
-        self.tank_1.setAttribute(id='LEVEL.HIGH' , value=90)
-        self.tank_1.setAttribute(id='LEVEL.LOW' , value=10)
+        self.tank_1.setAttribute(id='LEVEL.HIGH' , value=0.90)
+        self.tank_1.setAttribute(id='LEVEL.LOW' , value=0.10)
         self.tank_1.setAttribute(id='TEMP.HIGH' , value=42)
         self.tank_1.setAttribute(id='TEMP.LOW' , value=35)        
         self.tank_1.setAttribute(id='CAPACITY' , value=35000)
@@ -43,8 +43,8 @@ class ProcessSimulation():
 
         self.tank_2 = Tank()
         self.tank_2.setAttribute(id='NAME' , value='TQ2')
-        self.tank_2.setAttribute(id='LEVEL.HIGH' , value=90)
-        self.tank_2.setAttribute(id='LEVEL.LOW' , value=10)
+        self.tank_2.setAttribute(id='LEVEL.HIGH' , value=0.90)
+        self.tank_2.setAttribute(id='LEVEL.LOW' , value=0.10)
         self.tank_2.setAttribute(id='TEMP.HIGH' , value=30)
         self.tank_2.setAttribute(id='TEMP.LOW' , value=20)        
         self.tank_2.setAttribute(id='CAPACITY' , value=40000)
@@ -52,8 +52,8 @@ class ProcessSimulation():
         
         self.tank_3 = Tank()
         self.tank_3.setAttribute(id='NAME' , value='TQ3')
-        self.tank_3.setAttribute(id='LEVEL.HIGH' , value=90)
-        self.tank_3.setAttribute(id='LEVEL.LOW' , value=10)
+        self.tank_3.setAttribute(id='LEVEL.HIGH' , value=0.90)
+        self.tank_3.setAttribute(id='LEVEL.LOW' , value=0.10)
         self.tank_2.setAttribute(id='TEMP.HIGH' , value=40)
         self.tank_2.setAttribute(id='TEMP.LOW' , value=20)        
         self.tank_3.setAttribute(id='CAPACITY' , value=60000)
@@ -78,7 +78,10 @@ class ProcessSimulation():
 
         # Cooler
         self.cooler_1 = Cooler()
-        self.cooler_1 = Cooler()
+        self.cooler_1.setAttribute(id='NAME' , value='COOLER1')
+
+        self.cooler_2 = Cooler()
+        self.cooler_2.setAttribute(id='NAME' , value='COOLER2')
 
         # Ciclos de process
         self.ciclosTqAvaliables = 0
@@ -95,6 +98,34 @@ class ProcessSimulation():
         sentData = self.tank_1.publishMQTT(self.mqtt_client, self.mqtt_prefix)
         print('## MQTT', self.tank_1.getAttribute(id='NAME'), ":\n", sentData)
 
+        sentData = self.cooler_1.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+        print('## MQTT', self.cooler_1.getAttribute(id='NAME'), ":\n", sentData)
+
+
+    def simulationColler(self, tank: Tank):
+        name = tank.getAttribute(id='NAME')
+        sts = tank.getStatus()[0]
+        cooler = None
+
+        if name=='TQ1':
+            cooler = self.cooler_1
+        elif name=='TQ2':
+            cooler = self.cooler_2
+        else:
+            cooler = None
+
+        print('# COOLER [simulationColler] - Tank:',name, '- Cooler:', cooler.getAttribute(id='NAME'))
+
+        if sts==3: # COOLING
+            newVal = tank.getAttribute(id='TEMPERATURE')
+            newVal = round(newVal-(newVal*0.20),2)
+            cooler.setAttribute(id='TEMPERATURE', value=newVal)
+            cooler.setStatus(id=1)
+        else:
+            cooler.setAttribute(id='TEMPERATURE', value=tank.getAttribute(id='TEMPERATURE'))
+            cooler.setStatus(id=0)
+
+
     def simulationTankBuffer(self, tank: Tank):
 
         name = tank.getAttribute(id='NAME')
@@ -107,9 +138,9 @@ class ProcessSimulation():
             temp = tank.getAttribute(id='TEMPERATURE')
             tempLow = tank.getAttribute(id='TEMP.LOW')
             tempHigh = tank.getAttribute(id='TEMP.HIGH')
-            level = capacity*(tank.getAttribute(id='LEVEL')/100)
-            levelLow = capacity*(tank.getAttribute(id='LEVEL.LOW')/100)
-            levelHigh= capacity*(tank.getAttribute(id='LEVEL.HIGH')/100)
+            level = capacity*(tank.getAttribute(id='LEVEL'))
+            levelLow = capacity*(tank.getAttribute(id='LEVEL.LOW'))
+            levelHigh= capacity*(tank.getAttribute(id='LEVEL.HIGH'))
 
             print(f'>> TANK [{name}] - Dados:','\n',
                   'STATUS',':',tank.getStatus(),'\n',
@@ -163,7 +194,7 @@ class ProcessSimulation():
                     addTemp = random.randint(600,900)/10
                     newLevel = int(((level + addLiters)/capacity)*100)
                     newTemp  = round(((addLiters*addTemp)+(level*temp))/(addLiters+level),2)
-                    tank.setAttribute(id='LEVEL' , value=newLevel)
+                    tank.setAttribute(id='LEVEL' , value=newLevel/100)
                     tank.setAttribute(id='VOLUME' , value=round((level + addLiters), 2))
                     tank.setAttribute(id='TEMPERATURE' , value=newTemp)
                     print('FILLING:', 
@@ -196,6 +227,8 @@ class ProcessSimulation():
                         'tempLow=',tempLow,' ; ',
                         'tempHigh=',tempHigh, '\n'
                         )
+                    
+            self.simulationColler(tank)
 
 # MQTT
 def on_connect(client, userdata, flags, rc):

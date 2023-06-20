@@ -21,11 +21,12 @@ class Cooler(BaseElement):
     def __init__(self):
        super().__init__(
            dictAttributes={
-                'TEMPERATURE' : 0
+               'NAME' : '',
+               'TEMPERATURE' : 0
            }, 
            dictStatus={
-                0 : 'WAITING',
-                1 : 'COOLING'
+               0 : 'WAITING',
+               1 : 'COOLING'
            }
        )
 
