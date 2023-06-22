@@ -22,11 +22,12 @@ class Valve(BaseElement):
     def __init__(self):
        super().__init__(
            dictAttributes={
-                'POSITION' : 0
+               'NAME' : '',
+               'POSITION' : 0
            }, 
            dictStatus={
-                0 : 'CLOSED',
-                1 : 'OPENED'
+               0 : 'CLOSED',
+               1 : 'OPENED'
            }
        )
 

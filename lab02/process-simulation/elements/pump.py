@@ -22,11 +22,12 @@ class Pump(BaseElement):
     def __init__(self):
        super().__init__(
            dictAttributes={
-                'OPERATION' : 0
+               'NAME' : '',
+               'OPERATION' : 0
            }, 
            dictStatus={
-                0 : 'OFF',
-                1 : 'ON'
+               0 : 'OFF',
+               1 : 'ON'
            }
        )
 
