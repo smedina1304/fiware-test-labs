@@ -108,43 +108,49 @@ class ProcessSimulation():
     def simulationLogic(self):
 
         # TANK 1
-        self.simulationTankBuffer(self.__tank_1)
-        sentData = self.__tank_1.publishMQTT(self.mqtt_client, self.mqtt_prefix)
-        if self.__debug>=2:
-            print('## MQTT', self.__tank_1.getAttribute(id='NAME'), ":\n", sentData)
+        for tk in [self.__tank_1, self.__tank_2]:
+            self.simulationTankBuffer(tk)
+            sentData = tk.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            if self.__debug>=2:
+                print('## MQTT', tk.getAttribute(id='NAME'), ':\n', sentData, '\n')
 
-        time.sleep(self.sleepTime/5)
+            time.sleep(self.sleepTime/5)
 
         # COOLER
-        sentData = self.__cooler_1.publishMQTT(self.mqtt_client, self.mqtt_prefix)
-        if self.__debug>=2:
-            print('## MQTT', self.__cooler_1.getAttribute(id='NAME'), ":\n", sentData)
+        for cl in [self.__cooler_1, self.__cooler_2]:
+            sentData = cl.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            if self.__debug>=2:
+                print('## MQTT', cl.getAttribute(id='NAME'), ":\n", sentData)
 
-        time.sleep(self.sleepTime/5)
+            time.sleep(self.sleepTime/5)
 
         # VALVES
-        sentData = self.__valve_1_IN.publishMQTT(self.mqtt_client, self.mqtt_prefix)
-        if self.__debug>=2:
-            print('## MQTT', self.__valve_1_IN.getAttribute(id='NAME'), ":\n", sentData)
+        for valve_IN in [self.__valve_1_IN, self.__valve_2_IN]:
+            sentData = valve_IN.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            if self.__debug>=2:
+                print('## MQTT', valve_IN.getAttribute(id='NAME'), ":\n", sentData)
 
         time.sleep(self.sleepTime/5)
 
-        sentData = self.__valve_1_RET.publishMQTT(self.mqtt_client, self.mqtt_prefix)
-        if self.__debug>=2:
-            print('## MQTT', self.__valve_1_RET.getAttribute(id='NAME'), ":\n", sentData)
+        for valve_RET in [self.__valve_1_RET, self.__valve_2_RET]:
+            sentData = valve_RET.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            if self.__debug>=2:
+                print('## MQTT', valve_RET.getAttribute(id='NAME'), ":\n", sentData)
 
         time.sleep(self.sleepTime/5)
 
-        sentData = self.__valve_1_OUT.publishMQTT(self.mqtt_client, self.mqtt_prefix)
-        if self.__debug>=2:
-            print('## MQTT', self.__valve_1_OUT.getAttribute(id='NAME'), ":\n", sentData)
+        for valve_OUT in [self.__valve_1_OUT, self.__valve_2_OUT]:
+            sentData = valve_OUT.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            if self.__debug>=2:
+                print('## MQTT', valve_OUT.getAttribute(id='NAME'), ":\n", sentData)
 
         time.sleep(self.sleepTime/5)
 
         # PUMPS
-        sentData = self.__pump_1.publishMQTT(self.mqtt_client, self.mqtt_prefix)
-        if self.__debug>=2:
-            print('## MQTT', self.__pump_1.getAttribute(id='NAME'), ":\n", sentData)
+        for pump in [self.__pump_1, self.__pump_2]:
+            sentData = pump.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            if self.__debug>=2:
+                print('## MQTT', pump.getAttribute(id='NAME'), ":\n", sentData)
 
         time.sleep(self.sleepTime/5)        
 
