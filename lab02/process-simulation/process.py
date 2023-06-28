@@ -393,13 +393,14 @@ if __name__ == "__main__":
     client.loop_start()
 
     # Simulação
-    process = ProcessSimulation(mqtt_client=client, mqtt_prefix='scadalts/sm', sleepTime=5, debugLevel=2)
+    process = ProcessSimulation(mqtt_client=client, mqtt_prefix='scadalts/sm', sleepTime=5, debugLevel=1)
 
     client.publish(f"scadalts/sm/PROCESS/DATE", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     time.sleep(3)
     
     try:
-        for i in range(600):
+        # for i in range(600):
+        while True:
             process.simulationLogic()
             time.sleep(process.sleepTime/2)
     except KeyboardInterrupt:
