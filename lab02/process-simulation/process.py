@@ -8,6 +8,8 @@ import random
 
 import paho.mqtt.client as paho
 
+from typing import List
+
 from datetime import datetime
 from elements.tank import Tank
 from elements.valve import Valve
@@ -107,7 +109,7 @@ class ProcessSimulation():
 
     def simulationLogic(self):
 
-        # TANK 1
+        # TANKS BUFFERS
         for tk in [self.__tank_1, self.__tank_2]:
             self.simulationTankBuffer(tk)
             sentData = tk.publishMQTT(self.mqtt_client, self.mqtt_prefix)
@@ -265,7 +267,7 @@ class ProcessSimulation():
                             'tempLow=',tempLow,';',
                             'tempHigh=',tempHigh, '\n'
                             )
-                    
+
             self.simulationColler(tank)
             self.simulationValves(tank)
 
@@ -284,6 +286,100 @@ class ProcessSimulation():
             else:
                 tank.setAttribute(id='LEVEL.LOW.ALARM' , value=0)
                 tank.setAttribute(id='LEVEL.HIGH.ALARM' , value=0)
+
+
+    def simulationTankBlender(self, tankBuffes: List[Tank], tankBlender: Tank):
+
+        name = tankBlender.getAttribute(id='NAME')
+        if self.__debug>=1:
+            print('# TANK [simulationTankBlender] - NAME:',name)
+        
+        if name in ['TQ3']:
+
+            sts = tankBlender.getStatus()[0]
+            capacity = tankBlender.getAttribute(id='CAPACITY')
+            temp = tankBlender.getAttribute(id='TEMPERATURE')
+            tempLow = tankBlender.getAttribute(id='TEMP.LOW')
+            tempHigh = tankBlender.getAttribute(id='TEMP.HIGH')
+            level = capacity*(tankBlender.getAttribute(id='LEVEL')/100)
+            levelLow = capacity*(tankBlender.getAttribute(id='LEVEL.LOW')/100)
+            levelHigh= capacity*(tankBlender.getAttribute(id='LEVEL.HIGH')/100)
+
+            if self.__debug>=2:
+                print(f'>> TANK [{name}] - Dados:','\n',
+                    'STATUS',':',tankBlender.getStatus(),'\n',
+                    'CAPACITY',':',capacity,'\n',
+                    'TEMPERATURE',':',temp,'C°\n',
+                    'TEMP.LOW',':',tempLow,'C°\n',
+                    'TEMP.HIGH',':',tempHigh,'C°\n',
+                    'LEVEL',':',tankBlender.getAttribute(id='LEVEL'),f'- VOLUME: {level}','\n',
+                    'LEVEL.LOW',':',tankBlender.getAttribute(id='LEVEL.LOW'),f'({levelLow})','\n',
+                    'LEVEL.HIGH',':',tankBlender.getAttribute(id='LEVEL.HIGH'),f'({levelHigh})','\n',
+                    )
+
+            if sts == 0: # IS WAITING
+                if (level >= (levelLow*2)):
+                    tankBlender.setStatus(id=1) # TO AVAILABLE
+                else:
+                    allAvailables = True
+                    for tb in tankBuffes:
+                        stsTB = tb.getStatus()[0]
+
+                        if (allAvailables) and (stsTB!=1):
+                            allAvailables=False
+
+                    if allAvailables:
+                        tankBlender.setStatus(id=2) # TO FILLING
+
+                        for tb in tankBuffes:
+                            tb.setStatus(id=4) # TO TRANSFER
+
+            if sts == 2: # TO FILLING
+                valve_OUT= self.__valve_3_OUT
+                pump = self.__pump_3
+
+                valve_OUT.setStatus(id=0)
+                valve_OUT.setAttribute(id='POSITION', value=0)
+                pump.setStatus(id=0)
+                pump.setAttribute(id='OPERATION', value=0)
+                
+                tq1 = tankBuffes[0]
+                tq2 = tankBuffes[1]
+
+                levelHighTQ1 = tq1.getAttribute(id='LEVEL.LOW.ALARM')
+                levelHighTQ2 = tq2.getAttribute(id='LEVEL.LOW.ALARM')
+                
+                if (levelHighTQ1==1) or (levelHighTQ2==1) or (level >= levelHigh):
+                    tankBlender.setStatus(id=1) # TO AVAILABLE
+                    for tb in tankBuffes:
+                        tb.setStatus(id=0) # TO WAIT
+                else:
+                    levelTQ1 = capacity*(tq1.getAttribute(id='LEVEL')/100)
+                    levelTQ2 = capacity*(tq2.getAttribute(id='LEVEL')/100)
+
+                    capacityTQ1 = tq1.getAttribute(id='CAPACITY')
+                    capacityTQ2 = tq2.getAttribute(id='CAPACITY')
+
+                    tempTQ1 = tq1.getAttribute(id='TEMPERATURE')
+                    tempTQ2 = tq2.getAttribute(id='TEMPERATURE')
+
+                    addLiters = round(capacity*(random.randint(3,7)/1000),0) # 0.3% - 0.7%
+                    
+                    levelTQ1 = levelTQ1-addLiters
+                    tq1.setAttribute(id='LEVEL' , value=int((levelTQ1/capacityTQ1)*100))
+
+                    levelTQ2 = levelTQ2-(addLiters*2)
+                    tq2.setAttribute(id='LEVEL' , value=int((levelTQ2/capacityTQ2)*100))
+
+                    tankBlender.setAttribute(id='LEVEL' , value=int(((level+(addLiters*3))/capacity)*100))
+
+                    tq1.setAttribute(id='VOLUME' , value=round(levelTQ1, 2))
+                    tq2.setAttribute(id='VOLUME' , value=round(levelTQ2, 2))
+                    tankBlender.setAttribute(id='VOLUME' , value=round((level+(addLiters*3)), 2))
+
+                    newTemp = round(((addLiters*tempTQ1)+((addLiters*2)*tempTQ2)+(temp*level))/((addLiters*3)+level),2)
+                    tankBlender.setAttribute(id='TEMPERATURE' , value=newTemp)
+
 
 
     def simulationColler(self, tank: Tank):
@@ -364,7 +460,16 @@ class ProcessSimulation():
             valve_OUT.setStatus(id=0)
             valve_OUT.setAttribute(id='POSITION', value=0)
             pump.setStatus(id=1)
-            pump.setAttribute(id='OPERATION', value=1)            
+            pump.setAttribute(id='OPERATION', value=1)
+        elif sts == 4: # IS TRANSFER
+            valve_IN.setStatus(id=0)
+            valve_IN.setAttribute(id='POSITION', value=0)
+            valve_RET.setStatus(id=0)
+            valve_RET.setAttribute(id='POSITION', value=0)
+            valve_OUT.setStatus(id=1)
+            valve_OUT.setAttribute(id='POSITION', value=1)
+            pump.setStatus(id=1)
+            pump.setAttribute(id='OPERATION', value=1)
         else:
             print('# VALVES [simulationValves] - Tank:',name, 'Status (unmapped):', sts )
 
