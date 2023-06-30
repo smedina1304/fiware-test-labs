@@ -141,7 +141,7 @@ class ProcessSimulation():
 
         time.sleep(self.sleepTime/5)
 
-        for valve_OUT in [self.__valve_1_OUT, self.__valve_2_OUT]:
+        for valve_OUT in [self.__valve_1_OUT, self.__valve_2_OUT, self.__valve_3_OUT]:
             sentData = valve_OUT.publishMQTT(self.mqtt_client, self.mqtt_prefix)
             if self.__debug>=2:
                 print('## MQTT', valve_OUT.getAttribute(id='NAME'), ":\n", sentData)
@@ -149,7 +149,7 @@ class ProcessSimulation():
         time.sleep(self.sleepTime/5)
 
         # PUMPS
-        for pump in [self.__pump_1, self.__pump_2]:
+        for pump in [self.__pump_1, self.__pump_2, self.__pump_3]:
             sentData = pump.publishMQTT(self.mqtt_client, self.mqtt_prefix)
             if self.__debug>=2:
                 print('## MQTT', pump.getAttribute(id='NAME'), ":\n", sentData)
@@ -346,10 +346,10 @@ class ProcessSimulation():
                 tq1 = tankBuffes[0]
                 tq2 = tankBuffes[1]
 
-                levelHighTQ1 = tq1.getAttribute(id='LEVEL.LOW.ALARM')
-                levelHighTQ2 = tq2.getAttribute(id='LEVEL.LOW.ALARM')
+                levelLowTQ1 = tq1.getAttribute(id='LEVEL.LOW.ALARM')
+                levelLowTQ2 = tq2.getAttribute(id='LEVEL.LOW.ALARM')
                 
-                if (levelHighTQ1==1) or (levelHighTQ2==1) or (level >= levelHigh):
+                if (levelLowTQ1==1) or (levelLowTQ2==1) or (level >= levelHigh):
                     tankBlender.setStatus(id=1) # TO AVAILABLE
                     for tb in tankBuffes:
                         tb.setStatus(id=0) # TO WAIT
