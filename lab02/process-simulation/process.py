@@ -5,7 +5,7 @@
 # [START import_module]
 import time
 import random
-
+import getopt, sys
 import paho.mqtt.client as paho
 
 from typing import List
@@ -45,6 +45,7 @@ class ProcessSimulation():
         self.__tank_1.setAttribute(id='TEMP.LOW' , value=35)        
         self.__tank_1.setAttribute(id='CAPACITY' , value=35000)
         self.__tank_1.setAttribute(id='CAPACITY.UNIT' , value='LT')
+        self.__tank_1.setAttribute(id='TEMPERATURE' , value=23.7)
 
         self.__tank_2 = Tank()
         self.__tank_2.setAttribute(id='NAME' , value='TQ2')
@@ -54,7 +55,8 @@ class ProcessSimulation():
         self.__tank_2.setAttribute(id='TEMP.LOW' , value=20)        
         self.__tank_2.setAttribute(id='CAPACITY' , value=40000)
         self.__tank_2.setAttribute(id='CAPACITY.UNIT' , value='LT')
-        
+        self.__tank_2.setAttribute(id='TEMPERATURE' , value=24.2) 
+      
         self.__tank_3 = Tank()
         self.__tank_3.setAttribute(id='NAME' , value='TQ3')
         self.__tank_3.setAttribute(id='LEVEL.HIGH' , value=90)
@@ -63,7 +65,7 @@ class ProcessSimulation():
         self.__tank_2.setAttribute(id='TEMP.LOW' , value=20)        
         self.__tank_3.setAttribute(id='CAPACITY' , value=60000)
         self.__tank_3.setAttribute(id='CAPACITY.UNIT' , value='LT')
-
+        self.__tank_3.setAttribute(id='TEMPERATURE' , value=21.7) 
 
         # Valve
         self.__valve_1_IN = Valve()
@@ -104,7 +106,19 @@ class ProcessSimulation():
         self.__ciclosTqFill = 0
         self.__ciclosTqFillMax = 30
         self.__ciclosTqColl = 0
-        self.__ciclosTqCollMax = 20        
+        self.__ciclosTqCollMax = 20 
+
+        self.__ciclosBlAvaliables = 0
+        self.__ciclosBlAvaliablesMax = 50
+
+        ## Simulação
+        # self.__tank_1.setAttribute(id='LEVEL' , value=38)
+        # self.__tank_1.setAttribute(id='VOLUME' , value=13300)
+        # self.__tank_1.setAttribute(id='TEMPERATURE' , value=41.7)
+
+        # self.__tank_2.setAttribute(id='LEVEL' , value=42)
+        # self.__tank_2.setAttribute(id='VOLUME' , value=16800)
+        # self.__tank_2.setAttribute(id='TEMPERATURE' , value=28.2)         
 
 
     def simulationLogic(self):
@@ -112,11 +126,17 @@ class ProcessSimulation():
         # TANKS BUFFERS
         for tk in [self.__tank_1, self.__tank_2]:
             self.simulationTankBuffer(tk)
+
+        # TANK BLENDER
+        self.simulationTankBlender(tankBuffes=[self.__tank_1, self.__tank_2], tankBlender=self.__tank_3)
+
+        # TANKS Publish
+        for tk in [self.__tank_1, self.__tank_2,self.__tank_3]:
             sentData = tk.publishMQTT(self.mqtt_client, self.mqtt_prefix)
             if self.__debug>=2:
                 print('## MQTT', tk.getAttribute(id='NAME'), ':\n', sentData, '\n')
 
-            time.sleep(self.sleepTime/5)
+            time.sleep(self.sleepTime/5)            
 
         # COOLER
         for cl in [self.__cooler_1, self.__cooler_2]:
@@ -301,6 +321,7 @@ class ProcessSimulation():
             temp = tankBlender.getAttribute(id='TEMPERATURE')
             tempLow = tankBlender.getAttribute(id='TEMP.LOW')
             tempHigh = tankBlender.getAttribute(id='TEMP.HIGH')
+            volume = tankBlender.getAttribute(id='VOLUME')
             level = capacity*(tankBlender.getAttribute(id='LEVEL')/100)
             levelLow = capacity*(tankBlender.getAttribute(id='LEVEL.LOW')/100)
             levelHigh= capacity*(tankBlender.getAttribute(id='LEVEL.HIGH')/100)
@@ -316,6 +337,7 @@ class ProcessSimulation():
                     'LEVEL.LOW',':',tankBlender.getAttribute(id='LEVEL.LOW'),f'({levelLow})','\n',
                     'LEVEL.HIGH',':',tankBlender.getAttribute(id='LEVEL.HIGH'),f'({levelHigh})','\n',
                     )
+                
 
             if sts == 0: # IS WAITING
                 if (level >= (levelLow*2)):
@@ -333,6 +355,28 @@ class ProcessSimulation():
 
                         for tb in tankBuffes:
                             tb.setStatus(id=4) # TO TRANSFER
+
+            if sts == 1: # TO AVAILABLE
+                self.__ciclosBlAvaliables += 1
+                if ((level <= levelHigh) and
+                    (self.__ciclosBlAvaliables>self.__ciclosBlAvaliablesMax)):
+                    allAvailables = True
+                    for tb in tankBuffes:
+                        stsTB = tb.getStatus()[0]
+
+                        if (allAvailables) and (stsTB!=1):
+                            allAvailables=False
+
+                    if allAvailables:
+                        tankBlender.setStatus(id=2) # TO FILLING
+
+                        for tb in tankBuffes:
+                            tb.setStatus(id=4) # TO TRANSFER
+                    self.__ciclosBlAvaliables = 0
+                else:
+                    if self.__debug>=1:
+                        print('AVAILABLE BLENDER',
+                              f'looping [{self.__ciclosBlAvaliables}/{self.__ciclosBlAvaliablesMax}]')
 
             if sts == 2: # TO FILLING
                 valve_OUT= self.__valve_3_OUT
@@ -354,31 +398,49 @@ class ProcessSimulation():
                     for tb in tankBuffes:
                         tb.setStatus(id=0) # TO WAIT
                 else:
-                    levelTQ1 = capacity*(tq1.getAttribute(id='LEVEL')/100)
-                    levelTQ2 = capacity*(tq2.getAttribute(id='LEVEL')/100)
-
                     capacityTQ1 = tq1.getAttribute(id='CAPACITY')
                     capacityTQ2 = tq2.getAttribute(id='CAPACITY')
+
+                    volumeTQ1 = tq1.getAttribute(id='VOLUME')
+                    volumeTQ2 = tq2.getAttribute(id='VOLUME')
 
                     tempTQ1 = tq1.getAttribute(id='TEMPERATURE')
                     tempTQ2 = tq2.getAttribute(id='TEMPERATURE')
 
                     addLiters = round(capacity*(random.randint(3,7)/1000),0) # 0.3% - 0.7%
                     
-                    levelTQ1 = levelTQ1-addLiters
-                    tq1.setAttribute(id='LEVEL' , value=int((levelTQ1/capacityTQ1)*100))
+                    if self.__debug>=1:
+                        print(
+                            'BLENDER FILLING (BEFORE)',
+                            'Volume TQ1=',volumeTQ1,';',
+                            'Volume TQ2=',volumeTQ2,';',
+                            'Liters=',addLiters,';',
+                            'Liters TQ1=',(addLiters*(-1)),';',
+                            'Liters TQ2=',(addLiters*2*(-1)), '\n'
+                            )
 
-                    levelTQ2 = levelTQ2-(addLiters*2)
-                    tq2.setAttribute(id='LEVEL' , value=int((levelTQ2/capacityTQ2)*100))
+                    volumeTQ1 = volumeTQ1-addLiters
+                    tq1.setAttribute(id='LEVEL' , value=int((volumeTQ1/capacityTQ1)*100))
 
-                    tankBlender.setAttribute(id='LEVEL' , value=int(((level+(addLiters*3))/capacity)*100))
+                    volumeTQ2 = volumeTQ2-(addLiters*2)
+                    tq2.setAttribute(id='LEVEL' , value=int((volumeTQ2/capacityTQ2)*100))
 
-                    tq1.setAttribute(id='VOLUME' , value=round(levelTQ1, 2))
-                    tq2.setAttribute(id='VOLUME' , value=round(levelTQ2, 2))
-                    tankBlender.setAttribute(id='VOLUME' , value=round((level+(addLiters*3)), 2))
+                    tankBlender.setAttribute(id='LEVEL' , value=int(((volume+(addLiters*3))/capacity)*100))
 
-                    newTemp = round(((addLiters*tempTQ1)+((addLiters*2)*tempTQ2)+(temp*level))/((addLiters*3)+level),2)
+                    tq1.setAttribute(id='VOLUME' , value=round(volumeTQ1, 2))
+                    tq2.setAttribute(id='VOLUME' , value=round(volumeTQ2, 2))
+                    tankBlender.setAttribute(id='VOLUME' , value=round((volume+(addLiters*3)), 2))
+
+                    newTemp = round(((addLiters*tempTQ1)+((addLiters*2)*tempTQ2)+(temp*volume))/((addLiters*3)+volume),2)
                     tankBlender.setAttribute(id='TEMPERATURE' , value=newTemp)
+
+                    if self.__debug>=1:
+                        print('BLENDER FILLING (AFTER)',
+                            'Volume TQ1=',volumeTQ1,';',
+                            'Volume TQ2=',volumeTQ2,';',
+                            'level TQ3=',int(((level+(addLiters*3))/capacity)*100),';',
+                            'volume TQ3=',round((level+(addLiters*3)), 2), '\n'
+                            )
 
 
 
@@ -485,6 +547,42 @@ def on_connect(client, userdata, flags, rc):
 # Main
 if __name__ == "__main__":
 
+    # Remove 1st argument from the
+    # list of command line arguments
+    argumentList = sys.argv[1:]
+    
+    # Options
+    options = "d:"
+    
+    # Long options
+    long_options = ["Debug="]
+
+    # Debug Level
+    debugLevel = 0
+
+    try:
+        # Parsing argument
+        arguments, values = getopt.getopt(argumentList, options, long_options)
+
+        # checking each argument
+        for currentArgument, currentValue in arguments:
+    
+            if currentArgument in ("-d", "--Debug"):
+                isValid = True if currentValue in ['0', '1', '2', '3'] else False
+                if not isValid:
+                    debugLevel = 0
+                    print (f'# ERROR: Argument ({currentArgument} = {currentValue}) is not valid!')
+                    print ('> Information:', '\n', 
+                           '- Arguments supported (-d or --Debug) = [0, 1, 2 or 3]')
+                else:
+                    debugLevel = int(currentValue)
+          
+    except getopt.error as err:
+        print(f'# ERROR: {str(err)}', '\n\n')
+        debugLevel = 0
+
+    print(f'> Debug level setted to {debugLevel}.')
+
     # Define parameters
     mqtt_broker = 'broker.hivemq.com'
     mqtt_port = 1883
@@ -498,7 +596,7 @@ if __name__ == "__main__":
     client.loop_start()
 
     # Simulação
-    process = ProcessSimulation(mqtt_client=client, mqtt_prefix='scadalts/sm', sleepTime=5, debugLevel=1)
+    process = ProcessSimulation(mqtt_client=client, mqtt_prefix='scadalts/sm', sleepTime=5, debugLevel=debugLevel)
 
     client.publish(f"scadalts/sm/PROCESS/DATE", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     time.sleep(3)
