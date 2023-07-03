@@ -111,14 +111,23 @@ class ProcessSimulation():
         self.__ciclosBlAvaliables = 0
         self.__ciclosBlAvaliablesMax = 50
 
-        ## Simulação
-        # self.__tank_1.setAttribute(id='LEVEL' , value=38)
-        # self.__tank_1.setAttribute(id='VOLUME' , value=13300)
-        # self.__tank_1.setAttribute(id='TEMPERATURE' , value=41.7)
+        self.__litrosCiclo = 200
+        self.__litrosLote = 0
+        self.__litrosLoteMax = 40000
 
-        # self.__tank_2.setAttribute(id='LEVEL' , value=42)
-        # self.__tank_2.setAttribute(id='VOLUME' , value=16800)
-        # self.__tank_2.setAttribute(id='TEMPERATURE' , value=28.2)         
+        self.__totalLotes = 0
+
+        ## Simulação
+        self.__tank_1.setAttribute(id='LEVEL' , value=38)
+        self.__tank_1.setAttribute(id='VOLUME' , value=13300)
+        self.__tank_1.setAttribute(id='TEMPERATURE' , value=41.7)
+
+        self.__tank_2.setAttribute(id='LEVEL' , value=42)
+        self.__tank_2.setAttribute(id='VOLUME' , value=16800)
+        self.__tank_2.setAttribute(id='TEMPERATURE' , value=28.2)
+
+        ## MQTT
+        self.mqtt_client.publish(f"{self.mqtt_prefix}/PROCESS/DATE", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))  
 
 
     def simulationLogic(self):
@@ -129,6 +138,8 @@ class ProcessSimulation():
 
         # TANK BLENDER
         self.simulationTankBlender(tankBuffes=[self.__tank_1, self.__tank_2], tankBlender=self.__tank_3)
+
+        self.mqtt_client.publish(f"{self.mqtt_prefix}/PROCESS/TOTAL.LOTE", self.__totalLotes)
 
         # TANKS Publish
         for tk in [self.__tank_1, self.__tank_2,self.__tank_3]:
@@ -358,7 +369,12 @@ class ProcessSimulation():
 
             if sts == 1: # TO AVAILABLE
                 self.__ciclosBlAvaliables += 1
-                if ((level <= levelHigh) and
+
+                if ((level > self.__litrosLoteMax) and
+                    (self.__ciclosBlAvaliables>(self.__ciclosBlAvaliablesMax/2))):
+                    tankBlender.setStatus(id=4) # TO TRANSFER
+
+                elif ((level <= levelHigh) and
                     (self.__ciclosBlAvaliables>self.__ciclosBlAvaliablesMax)):
                     allAvailables = True
                     for tb in tankBuffes:
@@ -441,6 +457,40 @@ class ProcessSimulation():
                             'level TQ3=',int(((level+(addLiters*3))/capacity)*100),';',
                             'volume TQ3=',round((level+(addLiters*3)), 2), '\n'
                             )
+
+            if sts == 4: # TO TRANSFER
+                valve_OUT= self.__valve_3_OUT
+                pump = self.__pump_3
+
+                valve_OUT.setStatus(id=1)
+                valve_OUT.setAttribute(id='POSITION', value=1)
+                pump.setStatus(id=1)
+                pump.setAttribute(id='OPERATION', value=1)
+
+                if (level < levelLow):
+                    tankBlender.setStatus(id=1) # TO AVAILABLE
+                else:
+                    self.__litrosLote += self.__litrosCiclo
+
+                    tankBlender.setAttribute(id='VOLUME' , value=round((volume - self.__litrosCiclo), 2))
+                    tankBlender.setAttribute(id='LEVEL' , value=int(((volume - self.__litrosCiclo)/capacity)*100))
+
+                    if self.__litrosLote > self.__litrosLoteMax:
+                        self.__totalLotes += 1
+                        self.__litrosLote = self.__litrosLote-self.__litrosLoteMax
+
+                        if self.__litrosLote < self.__litrosLoteMax:
+                            tankBlender.setStatus(id=0) # TO WAIT
+
+                    if self.__debug>=1:
+                        print('BLENDER TRANSFER',
+                            'Volume (AFTER) =',volume,';',
+                            'Volume (BEFORE)=',(volume - self.__litrosCiclo),';',
+                            'Litres Transf. =',self.__litrosCiclo,';',
+                            'Total Transf.  =',self.__litrosLote, ';',
+                            'Total Lotes  =',self.__totalLotes, '\n'
+                            )
+
 
 
 
@@ -598,7 +648,6 @@ if __name__ == "__main__":
     # Simulação
     process = ProcessSimulation(mqtt_client=client, mqtt_prefix='scadalts/sm', sleepTime=5, debugLevel=debugLevel)
 
-    client.publish(f"scadalts/sm/PROCESS/DATE", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     time.sleep(3)
     
     try:
