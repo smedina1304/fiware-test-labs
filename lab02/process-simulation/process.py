@@ -111,7 +111,7 @@ class ProcessSimulation():
         self.__ciclosBlAvaliables = 0
         self.__ciclosBlAvaliablesMax = 50
 
-        self.__litrosCiclo = 200
+        self.__litrosCiclo = 400
         self.__litrosLote = 0
         self.__litrosLoteMax = 40000
 
