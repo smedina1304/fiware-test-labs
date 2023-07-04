@@ -61,8 +61,8 @@ class ProcessSimulation():
         self.__tank_3.setAttribute(id='NAME' , value='TQ3')
         self.__tank_3.setAttribute(id='LEVEL.HIGH' , value=90)
         self.__tank_3.setAttribute(id='LEVEL.LOW' , value=10)
-        self.__tank_2.setAttribute(id='TEMP.HIGH' , value=40)
-        self.__tank_2.setAttribute(id='TEMP.LOW' , value=20)        
+        self.__tank_3.setAttribute(id='TEMP.HIGH' , value=40)
+        self.__tank_3.setAttribute(id='TEMP.LOW' , value=20)        
         self.__tank_3.setAttribute(id='CAPACITY' , value=60000)
         self.__tank_3.setAttribute(id='CAPACITY.UNIT' , value='LT')
         self.__tank_3.setAttribute(id='TEMPERATURE' , value=21.7) 
@@ -113,7 +113,7 @@ class ProcessSimulation():
 
         self.__litrosCiclo = 400
         self.__litrosLote = 0
-        self.__litrosLoteMax = 40000
+        self.__litrosLoteMax = 25600
 
         self.__totalLotes = 0
 
@@ -123,7 +123,7 @@ class ProcessSimulation():
         self.__tank_1.setAttribute(id='TEMPERATURE' , value=41.7)
 
         self.__tank_2.setAttribute(id='LEVEL' , value=42)
-        self.__tank_2.setAttribute(id='VOLUME' , value=16800)
+        self.__tank_2.setAttribute(id='VOLUME' , value=26800)
         self.__tank_2.setAttribute(id='TEMPERATURE' , value=28.2)
 
         ## MQTT
@@ -257,7 +257,9 @@ class ProcessSimulation():
                     tank.setStatus(id=0) # TO WAITING
                     self.__ciclosTqFill = 0
                 else:
-                    addLiters = capacity*(random.randint(7,12)/1000) # 0.7% - 1.2%
+                    # TQ1 = 0.7% - 1.2%; TQ2 = 0.9% - 1.5%
+                    rd = random.randint(7,12) if name=='TQ1' else random.randint(9,15)
+                    addLiters = capacity*(rd/1000) 
                     addTemp = random.randint(600,900)/10
                     newLevel = int(((level + addLiters)/capacity)*100)
                     newTemp  = round(((addLiters*addTemp)+(level*temp))/(addLiters+level),2)
@@ -468,7 +470,7 @@ class ProcessSimulation():
                 pump.setAttribute(id='OPERATION', value=1)
 
                 if (level < levelLow):
-                    tankBlender.setStatus(id=1) # TO AVAILABLE
+                    tankBlender.setStatus(id=0) # TO WAIT
                 else:
                     self.__litrosLote += self.__litrosCiclo
 
@@ -491,7 +493,21 @@ class ProcessSimulation():
                             'Total Lotes  =',self.__totalLotes, '\n'
                             )
 
+            # ALARMS
+            if (temp<tempLow) or (temp>tempHigh):
+                tankBlender.setAttribute(id='TEMP.ALARM' , value=1)
+            else:
+                tankBlender.setAttribute(id='TEMP.ALARM' , value=0)
 
+            if (level<levelLow):
+                tankBlender.setAttribute(id='LEVEL.LOW.ALARM' , value=1)
+                tankBlender.setAttribute(id='LEVEL.HIGH.ALARM' , value=0)
+            elif(level>levelHigh):
+                tankBlender.setAttribute(id='LEVEL.LOW.ALARM' , value=0)
+                tankBlender.setAttribute(id='LEVEL.HIGH.ALARM' , value=1)
+            else:
+                tankBlender.setAttribute(id='LEVEL.LOW.ALARM' , value=0)
+                tankBlender.setAttribute(id='LEVEL.HIGH.ALARM' , value=0)
 
 
     def simulationColler(self, tank: Tank):
