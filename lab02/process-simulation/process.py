@@ -118,12 +118,12 @@ class ProcessSimulation():
         self.__totalLotes = 0
 
         ## Simulação
-        self.__tank_1.setAttribute(id='LEVEL' , value=38)
-        self.__tank_1.setAttribute(id='VOLUME' , value=13300)
+        self.__tank_1.setAttribute(id='LEVEL' , value=52)
+        self.__tank_1.setAttribute(id='VOLUME' , value=18300)
         self.__tank_1.setAttribute(id='TEMPERATURE' , value=41.7)
 
-        self.__tank_2.setAttribute(id='LEVEL' , value=42)
-        self.__tank_2.setAttribute(id='VOLUME' , value=26800)
+        self.__tank_2.setAttribute(id='LEVEL' , value=92)
+        self.__tank_2.setAttribute(id='VOLUME' , value=36000)
         self.__tank_2.setAttribute(id='TEMPERATURE' , value=28.2)
 
         ## MQTT
@@ -257,10 +257,10 @@ class ProcessSimulation():
                     tank.setStatus(id=0) # TO WAITING
                     self.__ciclosTqFill = 0
                 else:
-                    # TQ1 = 0.7% - 1.2%; TQ2 = 0.9% - 1.5%
-                    rd = random.randint(7,12) if name=='TQ1' else random.randint(9,15)
+                    # TQ1 = 1,2% - 2,0%; TQ2 = 2,0% - 3,5%
+                    rd = random.randint(12,20) if name=='TQ1' else random.randint(20,35)
                     addLiters = capacity*(rd/1000) 
-                    addTemp = random.randint(600,900)/10
+                    addTemp = random.randint(400,700)/10
                     newLevel = int(((level + addLiters)/capacity)*100)
                     newTemp  = round(((addLiters*addTemp)+(level*temp))/(addLiters+level),2)
                     tank.setAttribute(id='LEVEL' , value=newLevel)
