@@ -104,12 +104,12 @@ class ProcessSimulation():
         self.__ciclosTqAvaliables = 0
         self.__ciclosTqAvaliablesMax = 100
         self.__ciclosTqFill = 0
-        self.__ciclosTqFillMax = 30
+        self.__ciclosTqFillMax = 50
         self.__ciclosTqColl = 0
         self.__ciclosTqCollMax = 20 
 
         self.__ciclosBlAvaliables = 0
-        self.__ciclosBlAvaliablesMax = 50
+        self.__ciclosBlAvaliablesMax = 30
 
         self.__litrosCiclo = 400
         self.__litrosLote = 0
@@ -122,7 +122,7 @@ class ProcessSimulation():
         self.__tank_1.setAttribute(id='VOLUME' , value=18300)
         self.__tank_1.setAttribute(id='TEMPERATURE' , value=41.7)
 
-        self.__tank_2.setAttribute(id='LEVEL' , value=92)
+        self.__tank_2.setAttribute(id='LEVEL' , value=90)
         self.__tank_2.setAttribute(id='VOLUME' , value=36000)
         self.__tank_2.setAttribute(id='TEMPERATURE' , value=28.2)
 
@@ -257,8 +257,8 @@ class ProcessSimulation():
                     tank.setStatus(id=0) # TO WAITING
                     self.__ciclosTqFill = 0
                 else:
-                    # TQ1 = 1,2% - 2,0%; TQ2 = 2,0% - 3,5%
-                    rd = random.randint(12,20) if name=='TQ1' else random.randint(20,35)
+                    # TQ1 = 1,2% - 2,0%; TQ2 = 1,5% - 2,5%
+                    rd = random.randint(12,20) if name=='TQ1' else random.randint(15,25)
                     addLiters = capacity*(rd/1000) 
                     addTemp = random.randint(400,700)/10
                     newLevel = int(((level + addLiters)/capacity)*100)
