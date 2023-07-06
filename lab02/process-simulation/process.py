@@ -106,7 +106,7 @@ class ProcessSimulation():
         self.__ciclosTqFill = 0
         self.__ciclosTqFillMax = 30
         self.__ciclosTqColl = 0
-        self.__ciclosTqCollMax = 20 
+        self.__ciclosTqCollMax = 15 
 
         self.__ciclosBlAvaliables = 0
         self.__ciclosBlAvaliablesMax = 30
@@ -257,8 +257,8 @@ class ProcessSimulation():
                     tank.setStatus(id=0) # TO WAITING
                     self.__ciclosTqFill = 0
                 else:
-                    # TQ1 = 1,0% - 2,0%; TQ2 = 1,5% - 2,5%
-                    rd = random.randint(10,20) if name=='TQ1' else random.randint(15,25)
+                    # TQ1 = 1,0% - 2,0%; TQ2 = 1,5% - 2,2%
+                    rd = random.randint(10,20) if name=='TQ1' else random.randint(15,22)
                     addLiters = capacity*(rd/1000) 
                     addTemp = random.randint(400,700)/10
                     newLevel = int(((level + addLiters)/capacity)*100)
