@@ -258,7 +258,7 @@ class ProcessSimulation():
                     self.__ciclosTqFill = 0
                 else:
                     # TQ1 = 1,0% - 2,0%; TQ2 = 1,5% - 2,2%
-                    rd = random.randint(10,20) if name=='TQ1' else random.randint(15,24)
+                    rd = random.randint(10,20) if name=='TQ1' else random.randint(17,28)
                     addLiters = capacity*(rd/1000) 
                     addTemp = random.randint(400,700)/10
                     newLevel = int(((level + addLiters)/capacity)*100)
