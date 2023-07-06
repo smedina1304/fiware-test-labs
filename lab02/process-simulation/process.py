@@ -471,6 +471,10 @@ class ProcessSimulation():
 
                 if (level < levelLow):
                     tankBlender.setStatus(id=0) # TO WAIT
+                    valve_OUT.setStatus(id=0)
+                    valve_OUT.setAttribute(id='POSITION', value=0)
+                    pump.setStatus(id=0)
+                    pump.setAttribute(id='OPERATION', value=0)         
                 else:
                     self.__litrosLote += self.__litrosCiclo
 
@@ -483,6 +487,10 @@ class ProcessSimulation():
 
                         if self.__litrosLote < self.__litrosLoteMax:
                             tankBlender.setStatus(id=0) # TO WAIT
+                            valve_OUT.setStatus(id=0)
+                            valve_OUT.setAttribute(id='POSITION', value=0)
+                            pump.setStatus(id=0)
+                            pump.setAttribute(id='OPERATION', value=0)
 
                     if self.__debug>=1:
                         print('BLENDER TRANSFER',
