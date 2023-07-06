@@ -40,7 +40,7 @@ class ProcessSimulation():
         self.__tank_1 = Tank()
         self.__tank_1.setAttribute(id='NAME' , value='TQ1')
         self.__tank_1.setAttribute(id='LEVEL.HIGH' , value=90)
-        self.__tank_1.setAttribute(id='LEVEL.LOW' , value=10)
+        self.__tank_1.setAttribute(id='LEVEL.LOW' , value=5)
         self.__tank_1.setAttribute(id='TEMP.HIGH' , value=42)
         self.__tank_1.setAttribute(id='TEMP.LOW' , value=35)        
         self.__tank_1.setAttribute(id='CAPACITY' , value=35000)
@@ -50,7 +50,7 @@ class ProcessSimulation():
         self.__tank_2 = Tank()
         self.__tank_2.setAttribute(id='NAME' , value='TQ2')
         self.__tank_2.setAttribute(id='LEVEL.HIGH' , value=90)
-        self.__tank_2.setAttribute(id='LEVEL.LOW' , value=10)
+        self.__tank_2.setAttribute(id='LEVEL.LOW' , value=5)
         self.__tank_2.setAttribute(id='TEMP.HIGH' , value=30)
         self.__tank_2.setAttribute(id='TEMP.LOW' , value=20)        
         self.__tank_2.setAttribute(id='CAPACITY' , value=40000)
@@ -60,7 +60,7 @@ class ProcessSimulation():
         self.__tank_3 = Tank()
         self.__tank_3.setAttribute(id='NAME' , value='TQ3')
         self.__tank_3.setAttribute(id='LEVEL.HIGH' , value=90)
-        self.__tank_3.setAttribute(id='LEVEL.LOW' , value=10)
+        self.__tank_3.setAttribute(id='LEVEL.LOW' , value=5)
         self.__tank_3.setAttribute(id='TEMP.HIGH' , value=40)
         self.__tank_3.setAttribute(id='TEMP.LOW' , value=20)        
         self.__tank_3.setAttribute(id='CAPACITY' , value=60000)
@@ -102,7 +102,7 @@ class ProcessSimulation():
 
         # Ciclos de process
         self.__ciclosTqAvaliables = 0
-        self.__ciclosTqAvaliablesMax = 100
+        self.__ciclosTqAvaliablesMax = 50
         self.__ciclosTqFill = 0
         self.__ciclosTqFillMax = 30
         self.__ciclosTqColl = 0
@@ -155,7 +155,7 @@ class ProcessSimulation():
             if self.__debug>=2:
                 print('## MQTT', cl.getAttribute(id='NAME'), ":\n", sentData)
 
-            time.sleep(self.sleepTime/5)
+        time.sleep(self.sleepTime/5)
 
         # VALVES
         for valve_IN in [self.__valve_1_IN, self.__valve_2_IN]:
