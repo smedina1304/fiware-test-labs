@@ -139,6 +139,7 @@ class ProcessSimulation():
         # TANK BLENDER
         self.simulationTankBlender(tankBuffes=[self.__tank_1, self.__tank_2], tankBlender=self.__tank_3)
 
+        self.mqtt_client.publish(f"{self.mqtt_prefix}/PROCESS/LITROS.LOTE", self.__litrosLote)
         self.mqtt_client.publish(f"{self.mqtt_prefix}/PROCESS/TOTAL.LOTE", self.__totalLotes)
 
         # TANKS Publish
