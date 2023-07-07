@@ -29,7 +29,7 @@ services:
     command: --log_bin_trust_function_creators=1
 
   scadalts:
-    image: scadalts/scadalts:latest
+    image: scadalts/scadalts:master
     container_name: scadalts
     hostname: scadalts
     environment:
