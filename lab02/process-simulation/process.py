@@ -214,7 +214,14 @@ class ProcessSimulation():
                     )
 
             if sts == 0: # IS WAITING
-                if level >= (levelLow*2):
+
+                if ((level >= (levelLow*2)) and
+                      (self.__ciclosTqFill>=self.__ciclosTqFillMax) and
+                      (temp >= tempHigh)):
+                    tank.setStatus(id=3) # TO COOLING
+                    self.__ciclosTqFill = 0
+                    self.__ciclosTqColl = 0                
+                elif level >= (levelLow*2):
                     tank.setStatus(id=1) # TO AVAILABLE
                     self.__ciclosTqAvaliables = 0
                 else:
@@ -242,6 +249,7 @@ class ProcessSimulation():
                 if level >= levelHigh:
                     tank.setStatus(id=0) # TO WAITING
                     self.__ciclosTqFill = 0
+                    self.__ciclosTqColl = 0
                 elif ((level >= (levelLow*3)) and
                       (self.__ciclosTqFill>=self.__ciclosTqFillMax) and
                       (temp >= tempHigh)):
