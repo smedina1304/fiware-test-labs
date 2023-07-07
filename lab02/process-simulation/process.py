@@ -102,7 +102,7 @@ class ProcessSimulation():
 
         # Ciclos de process
         self.__ciclosTqAvaliables = 0
-        self.__ciclosTqAvaliablesMax = 50
+        self.__ciclosTqAvaliablesMax = 40
         self.__ciclosTqFill = 0
         self.__ciclosTqFillMax = 30
         self.__ciclosTqColl = 0
@@ -156,7 +156,7 @@ class ProcessSimulation():
             if self.__debug>=2:
                 print('## MQTT', cl.getAttribute(id='NAME'), ":\n", sentData)
 
-        time.sleep(self.sleepTime/5)
+        time.sleep(self.sleepTime/10)
 
         # VALVES
         for valve_IN in [self.__valve_1_IN, self.__valve_2_IN]:
@@ -164,21 +164,17 @@ class ProcessSimulation():
             if self.__debug>=2:
                 print('## MQTT', valve_IN.getAttribute(id='NAME'), ":\n", sentData)
 
-        time.sleep(self.sleepTime/5)
-
         for valve_RET in [self.__valve_1_RET, self.__valve_2_RET]:
             sentData = valve_RET.publishMQTT(self.mqtt_client, self.mqtt_prefix)
             if self.__debug>=2:
                 print('## MQTT', valve_RET.getAttribute(id='NAME'), ":\n", sentData)
-
-        time.sleep(self.sleepTime/5)
 
         for valve_OUT in [self.__valve_1_OUT, self.__valve_2_OUT, self.__valve_3_OUT]:
             sentData = valve_OUT.publishMQTT(self.mqtt_client, self.mqtt_prefix)
             if self.__debug>=2:
                 print('## MQTT', valve_OUT.getAttribute(id='NAME'), ":\n", sentData)
 
-        time.sleep(self.sleepTime/5)
+        time.sleep(self.sleepTime/10)
 
         # PUMPS
         for pump in [self.__pump_1, self.__pump_2, self.__pump_3]:
