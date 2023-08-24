@@ -5,36 +5,22 @@ curl --location 'http://localhost:4042/iot/devices' \
 --data '{
     "devices": [
         {
-            "device_id": "server001",
-            "entity_name": "urn:ngsi-ld:Server:001",
-            "entity_type": "Computer",
-            "attributes": [
-                {
-                    "object_id": "cpu",
-                    "name": "cpu",
-                    "type": "Decimal"
-                },
-                {
-                    "object_id": "mem",
-                    "name": "memory",
-                    "type": "Decimal"
-                }
-            ],
-            "static_attributes": [
-                {
-                    "name": "relationship",
-                    "type": "Relationship",
-                    "value": "urn:ngsi-ld:Rack:SP:001"
-                }
-            ]
-        },
-        {
             "device_id": "TQ1",
             "entity_name": "urn:ngsi-ld:SiteSP:Envase01:TQ1",
             "entity_type": "Equip",
             "protocol": "PDI-IoTA-UltraLight",
             "transport": "MQTT",
             "attributes": [
+                {
+                    "object_id": "STATUS.ID",
+                    "name": "STATUS.ID",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "STATUS.DESC",
+                    "name": "STATUS.DESC",
+                    "type": "Text"
+                },
                 {
                     "object_id": "LEVEL",
                     "name": "LEVEL",
@@ -112,6 +98,16 @@ curl --location 'http://localhost:4042/iot/devices' \
             "transport": "MQTT",
             "attributes": [
                 {
+                    "object_id": "STATUS.ID",
+                    "name": "STATUS.ID",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "STATUS.DESC",
+                    "name": "STATUS.DESC",
+                    "type": "Text"
+                },
+                {
                     "object_id": "LEVEL",
                     "name": "LEVEL",
                     "type": "Number"
@@ -187,6 +183,16 @@ curl --location 'http://localhost:4042/iot/devices' \
             "protocol": "PDI-IoTA-UltraLight",
             "transport": "MQTT",
             "attributes": [
+                {
+                    "object_id": "STATUS.ID",
+                    "name": "STATUS.ID",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "STATUS.DESC",
+                    "name": "STATUS.DESC",
+                    "type": "Text"
+                },
                 {
                     "object_id": "LEVEL",
                     "name": "LEVEL",
