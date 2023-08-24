@@ -145,7 +145,7 @@ class ProcessSimulation():
 
         # TANKS Publish
         for tk in [self.__tank_1, self.__tank_2,self.__tank_3]:
-            sentData = tk.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            sentData = tk.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
             if self.__debug>=2:
                 print('## MQTT', tk.getAttribute(id='NAME'), ':\n', sentData, '\n')
 
@@ -153,7 +153,7 @@ class ProcessSimulation():
 
         # COOLER
         for cl in [self.__cooler_1, self.__cooler_2]:
-            sentData = cl.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            sentData = cl.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
             if self.__debug>=2:
                 print('## MQTT', cl.getAttribute(id='NAME'), ":\n", sentData)
 
@@ -161,17 +161,17 @@ class ProcessSimulation():
 
         # VALVES
         for valve_IN in [self.__valve_1_IN, self.__valve_2_IN]:
-            sentData = valve_IN.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            sentData = valve_IN.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
             if self.__debug>=2:
                 print('## MQTT', valve_IN.getAttribute(id='NAME'), ":\n", sentData)
 
         for valve_RET in [self.__valve_1_RET, self.__valve_2_RET]:
-            sentData = valve_RET.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            sentData = valve_RET.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
             if self.__debug>=2:
                 print('## MQTT', valve_RET.getAttribute(id='NAME'), ":\n", sentData)
 
         for valve_OUT in [self.__valve_1_OUT, self.__valve_2_OUT, self.__valve_3_OUT]:
-            sentData = valve_OUT.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            sentData = valve_OUT.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
             if self.__debug>=2:
                 print('## MQTT', valve_OUT.getAttribute(id='NAME'), ":\n", sentData)
 
@@ -179,7 +179,7 @@ class ProcessSimulation():
 
         # PUMPS
         for pump in [self.__pump_1, self.__pump_2, self.__pump_3]:
-            sentData = pump.publishMQTT(self.mqtt_client, self.mqtt_prefix)
+            sentData = pump.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
             if self.__debug>=2:
                 print('## MQTT', pump.getAttribute(id='NAME'), ":\n", sentData)
 
@@ -670,7 +670,7 @@ if __name__ == "__main__":
     # Define parameters
     # mqtt_broker = 'broker.hivemq.com'
     # mqtt_port = 1883
-    mqtt_broker = 'localhost'
+    mqtt_broker = '192.168.0.35'    #'localhost'
     mqtt_port = 1883    
 
     # MQTT broker
