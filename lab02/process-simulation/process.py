@@ -670,7 +670,7 @@ if __name__ == "__main__":
     # Define parameters
     # mqtt_broker = 'broker.hivemq.com'
     # mqtt_port = 1883
-    mqtt_broker = 'mosquitto'
+    mqtt_broker = 'localhost'
     mqtt_port = 1883    
 
     # MQTT broker
