@@ -28,11 +28,12 @@ class ProcessSimulation():
     """
 
     # [METHOD - Constrution]
-    def __init__(self,mqtt_client=None, mqtt_prefix=None, sleepTime=5, debugLevel=0):
+    def __init__(self,mqtt_client=None, mqtt_prefix=None, fiware_services_key=None, sleepTime=5, debugLevel=0):
 
         # MQTT
         self.mqtt_client = mqtt_client
         self.mqtt_prefix = mqtt_prefix
+        self.fiware_services_key = fiware_services_key
         self.sleepTime = sleepTime
         self.__debug = debugLevel
         
@@ -127,7 +128,7 @@ class ProcessSimulation():
         self.__tank_2.setAttribute(id='TEMPERATURE' , value=28.2)
 
         ## MQTT
-        self.mqtt_client.publish(f"{self.mqtt_prefix}/PROCESS/DATE", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))  
+        self.mqtt_client.publish(f"{self.mqtt_prefix}/PROCESS/DATE", datetime.now().strftime("%Y-%m-%dT%H:%M:%S"))  
 
 
     def simulationLogic(self):
@@ -667,8 +668,10 @@ if __name__ == "__main__":
     print(f'> Debug level setted to {debugLevel}.')
 
     # Define parameters
-    mqtt_broker = 'broker.hivemq.com'
-    mqtt_port = 1883
+    # mqtt_broker = 'broker.hivemq.com'
+    # mqtt_port = 1883
+    mqtt_broker = 'mosquitto'
+    mqtt_port = 1883    
 
     # MQTT broker
     client = paho.Client("MyProcessSimulation")         #create new instance
@@ -678,8 +681,16 @@ if __name__ == "__main__":
 
     client.loop_start()
 
+    fiware_services_key = 'PoyryLab'
+
     # Simulação
-    process = ProcessSimulation(mqtt_client=client, mqtt_prefix='scadalts/sm', sleepTime=5, debugLevel=debugLevel)
+    process = ProcessSimulation(
+        mqtt_client=client, 
+        mqtt_prefix='scadalts/sm',
+        fiware_services_key = 'PoyryLab',
+        sleepTime=5, 
+        debugLevel=debugLevel
+    )
 
     time.sleep(3)
     
