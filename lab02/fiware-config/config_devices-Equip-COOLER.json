@@ -1,0 +1,63 @@
+{
+    "devices": [
+        {
+            "device_id": "COOLER1",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:COOLER1",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "TEMPERATURE",
+                    "name": "TEMPERATURE",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        },
+        {
+            "device_id": "COOLER2",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:COOLER2",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "TEMPERATURE",
+                    "name": "TEMPERATURE",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        }
+    ]
+}
+

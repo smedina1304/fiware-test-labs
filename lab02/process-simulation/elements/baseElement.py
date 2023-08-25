@@ -155,23 +155,23 @@ class BaseElement:
                 value = str(self.getAttribute(id=attr))
                 mqtt_client.publish(topic, value)
                 sentMQTT[topic] = value
-                sentJSON[attr] = value
+                sentJSON[attr.replace('.','_')] = value
 
             # Status
             topic = f"{mqtt_prefix}/{name}/STATUS.ID"
             value = str(self.getStatus()[0])
             mqtt_client.publish(topic, value)
             sentMQTT[topic] = value
-            sentJSON['STATUS.ID'] = value
+            sentJSON['STATUS_ID'] = value
 
             topic = f"{mqtt_prefix}/{name}/STATUS.DESC"
             value = str(self.getStatus()[1])
             mqtt_client.publish(topic, value)
             sentMQTT[topic] = value
-            sentJSON['STATUS.DESC'] = value
+            sentJSON['STATUS_DESC'] = value
 
             if agent_ip_port is not None:
-                url = f"http://{agent_ip_port}/iot/json?k={fiware_services_key}&i={name}"
+                url = f"http://{agent_ip_port}/iot/json?k={fiware_services_key}&i={name.replace('.','_')}"
 
                 payload = json.dumps(sentJSON)
                 headers = {

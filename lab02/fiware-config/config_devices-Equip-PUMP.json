@@ -1,0 +1,92 @@
+{
+    "devices": [
+        {
+            "device_id": "PUMP1",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:PUMP1",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "OPERATION",
+                    "name": "OPERATION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        },
+        {
+            "device_id": "PUMP2",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:PUMP2",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "OPERATION",
+                    "name": "OPERATION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        },
+        {
+            "device_id": "PUMP3",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:PUMP3",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "OPERATION",
+                    "name": "OPERATION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        }
+    ]
+}
+

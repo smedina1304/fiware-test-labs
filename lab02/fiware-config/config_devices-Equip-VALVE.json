@@ -1,0 +1,208 @@
+{
+    "devices": [
+        {
+            "device_id": "VALVE_1_IN",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:VALVE_1_IN",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "POSITION",
+                    "name": "POSITION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        },
+        {
+            "device_id": "VALVE_1_RET",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:VALVE_1_RET",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "POSITION",
+                    "name": "POSITION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        },
+        {
+            "device_id": "VALVE_1_OUT",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:VALVE_1_OUT",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "POSITION",
+                    "name": "POSITION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        },
+        {
+            "device_id": "VALVE_2_IN",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:VALVE_2_IN",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "POSITION",
+                    "name": "POSITION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        },
+        {
+            "device_id": "VALVE_2_RET",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:VALVE_2_RET",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "POSITION",
+                    "name": "POSITION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        },
+        {
+            "device_id": "VALVE_2_OUT",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:VALVE_2_OUT",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "POSITION",
+                    "name": "POSITION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        },
+        {
+            "device_id": "VALVE_3_OUT",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:VALVE_3_OUT",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
+                    "type": "Boolean"
+                },
+                {
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
+                    "type": "Text"
+                },
+                {
+                    "object_id": "POSITION",
+                    "name": "POSITION",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        }
+    ]
+}
+
