@@ -28,12 +28,13 @@ class ProcessSimulation():
     """
 
     # [METHOD - Constrution]
-    def __init__(self,mqtt_client=None, mqtt_prefix=None, fiware_services_key=None, sleepTime=5, debugLevel=0):
+    def __init__(self,mqtt_client=None, mqtt_prefix=None, fiware_services_key=None, agent_ip_port=None, sleepTime=5, debugLevel=0):
 
         # MQTT
         self.mqtt_client = mqtt_client
         self.mqtt_prefix = mqtt_prefix
         self.fiware_services_key = fiware_services_key
+        self.agent_ip_port = agent_ip_port
         self.sleepTime = sleepTime
         self.__debug = debugLevel
         
@@ -145,7 +146,7 @@ class ProcessSimulation():
 
         # TANKS Publish
         for tk in [self.__tank_1, self.__tank_2,self.__tank_3]:
-            sentData = tk.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
+            sentData = tk.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key, self.agent_ip_port)
             if self.__debug>=2:
                 print('## MQTT', tk.getAttribute(id='NAME'), ':\n', sentData, '\n')
 
@@ -153,7 +154,7 @@ class ProcessSimulation():
 
         # COOLER
         for cl in [self.__cooler_1, self.__cooler_2]:
-            sentData = cl.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
+            sentData = cl.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key, self.agent_ip_port)
             if self.__debug>=2:
                 print('## MQTT', cl.getAttribute(id='NAME'), ":\n", sentData)
 
@@ -161,17 +162,17 @@ class ProcessSimulation():
 
         # VALVES
         for valve_IN in [self.__valve_1_IN, self.__valve_2_IN]:
-            sentData = valve_IN.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
+            sentData = valve_IN.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key, self.agent_ip_port)
             if self.__debug>=2:
                 print('## MQTT', valve_IN.getAttribute(id='NAME'), ":\n", sentData)
 
         for valve_RET in [self.__valve_1_RET, self.__valve_2_RET]:
-            sentData = valve_RET.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
+            sentData = valve_RET.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key, self.agent_ip_port)
             if self.__debug>=2:
                 print('## MQTT', valve_RET.getAttribute(id='NAME'), ":\n", sentData)
 
         for valve_OUT in [self.__valve_1_OUT, self.__valve_2_OUT, self.__valve_3_OUT]:
-            sentData = valve_OUT.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
+            sentData = valve_OUT.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key, self.agent_ip_port)
             if self.__debug>=2:
                 print('## MQTT', valve_OUT.getAttribute(id='NAME'), ":\n", sentData)
 
@@ -179,7 +180,7 @@ class ProcessSimulation():
 
         # PUMPS
         for pump in [self.__pump_1, self.__pump_2, self.__pump_3]:
-            sentData = pump.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key)
+            sentData = pump.publishMQTT(self.mqtt_client, self.mqtt_prefix, self.fiware_services_key, self.agent_ip_port)
             if self.__debug>=2:
                 print('## MQTT', pump.getAttribute(id='NAME'), ":\n", sentData)
 
@@ -643,6 +644,7 @@ if __name__ == "__main__":
 
     # Debug Level
     debugLevel = 0
+    agent_ip_port = '192.168.0.35:4041'
 
     try:
         # Parsing argument
@@ -656,16 +658,31 @@ if __name__ == "__main__":
                 if not isValid:
                     debugLevel = 0
                     print (f'# ERROR: Argument ({currentArgument} = {currentValue}) is not valid!')
-                    print ('> Information:', '\n', 
-                           '- Arguments supported (-d or --Debug) = [0, 1, 2 or 3]')
+                    print ('- Arguments supported:', '\n', 
+                           f'\t(-d or --Debug) = [0, 1, 2 or 3]', '\n', 
+                           f'\t(--agent_ip_port) = <ip>:<port> or <hostname>:<port>')
                 else:
                     debugLevel = int(currentValue)
-          
+
+            elif currentArgument in ("--agent_ip_port"):
+                isValid = True if currentValue is not None else False
+                if not isValid:
+                    debugLevel = 0
+                    print (f'# ERROR: Argument ({currentArgument} = {currentValue}) is not valid!')
+                    print ('- Arguments supported:', '\n', 
+                           f'\t(-d or --Debug) = [0, 1, 2 or 3]', '\n', 
+                           f'\t(--agent_ip_port) = <ip>:<port> or <hostname>:<port>')
+                else:
+                    debugLevel = int(currentValue)        
+
     except getopt.error as err:
         print(f'# ERROR: {str(err)}', '\n\n')
         debugLevel = 0
 
-    print(f'> Debug level setted to {debugLevel}.')
+    print ('\n\n','> Information:', '\n', 
+            '- Arguments setted:', '\n', 
+            f'\tDebug level = "{debugLevel}"', '\n', 
+            f'\tiotAgent (ip/port) = "{agent_ip_port}"', '\n')
 
     # Define parameters
     # mqtt_broker = 'broker.hivemq.com'
@@ -681,18 +698,19 @@ if __name__ == "__main__":
 
     client.loop_start()
 
-    fiware_services_key = 'PoyryLab'
-
     # Simulação
     process = ProcessSimulation(
         mqtt_client=client, 
         mqtt_prefix='scadalts/sm',
         fiware_services_key = 'PoyryLab',
+        agent_ip_port = '192.168.0.35:4041',
         sleepTime=5, 
         debugLevel=debugLevel
     )
 
     time.sleep(3)
+
+    print ('\n\n','> Starting simulation...', '\n')    
     
     try:
         # for i in range(600):

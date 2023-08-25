@@ -4,6 +4,8 @@
 
 # [START import_module]
 import paho.mqtt.client as paho
+import json
+import requests
 # [END import_module]
 
 
@@ -124,7 +126,7 @@ class BaseElement:
         except KeyError:
             return None
 
-    def publishMQTT(self, mqtt_client:paho.Client=None, mqtt_prefix=None, fiware_services_key=None):
+    def publishMQTT(self, mqtt_client:paho.Client=None, mqtt_prefix=None, fiware_services_key=None, agent_ip_port=None):
         """
         Metodo publishMQTT
 
@@ -137,51 +139,45 @@ class BaseElement:
         Parametros:
         - mqtt_client: Classe de conexão com o Server MQTT
         - mqtt_prefix: Prefixo do Tópico que receberá o valor
-        - fiware_services_key: Chave do serviço do FIWARE para o padrão "UltraLight" para iotAgente MQTT
+        - fiware_services_key: Chave do serviço do FIWARE para o iotAgente JSON
         """
-
-        prefixes = [mqtt_prefix, f'ul/{fiware_services_key}' ]
-        sentData = {}
-        topic = None
-        value = None
+        sentMQTT = {}
+        sentJSON = {}
         
         if ((mqtt_client is not None) and
             (mqtt_prefix is not None)):
             name = self.getAttribute(id='NAME')
 
-            for prefix in prefixes:
-                # Atributos
-                attrs = list(self.getAttributes().keys())[1:]
-                for attr in attrs:
-                    if prefix.startswith('ul/'):
-                        topic = f"{prefix}/{name}/attrs"
-                        value = f"{name}|{str(self.getAttribute(id=attr))}"                      
-                    else:
-                        topic = f"{prefix}/{name}/{attr}"
-                        value = str(self.getAttribute(id=attr))
-
-                    mqtt_client.publish(topic, value)
-                    sentData[topic] = value
-
-                # Status
-                if prefix.startswith('ul/'):
-                    topic = f"{prefix}/{name}/attrs"
-                    value = f"STATUS.ID|{str(self.getStatus()[0])}"
-                else:
-                    topic = f"{prefix}/{name}/STATUS.ID"
-                    value = str(self.getStatus()[0])
+            # Atributos
+            attrs = list(self.getAttributes().keys())[1:]
+            for attr in attrs:
+                topic = f"{mqtt_prefix}/{name}/{attr}"
+                value = str(self.getAttribute(id=attr))
                 mqtt_client.publish(topic, value)
-                sentData[topic] = value
+                sentMQTT[topic] = value
+                sentJSON[attr] = value
 
-                if prefix.startswith('ul/'):
-                    topic = f"{prefix}/{name}/attrs"
-                    value = f"STATUS.DESC|{str(self.getStatus()[1])}"
-                else:
-                    topic = f"{prefix}/{name}/STATUS.DESC"
-                    value = str(self.getStatus()[1])
-                mqtt_client.publish(topic, value)
-                sentData[topic] = value
+            # Status
+            topic = f"{mqtt_prefix}/{name}/STATUS.ID"
+            value = str(self.getStatus()[0])
+            mqtt_client.publish(topic, value)
+            sentMQTT[topic] = value
+            sentJSON['STATUS.ID'] = value
 
-        return sentData
+            topic = f"{mqtt_prefix}/{name}/STATUS.DESC"
+            value = str(self.getStatus()[1])
+            mqtt_client.publish(topic, value)
+            sentMQTT[topic] = value
+            sentJSON['STATUS.DESC'] = value
+
+            if agent_ip_port is not None:
+                url = f"http://{agent_ip_port}/iot/json?k={agent_ip_port}&i={name}"
+
+                payload = json.dumps(sentJSON)
+                headers = {"Content-Type": "application/json"}
+
+                res = requests.request("POST", url, headers=headers, data=payload)
+
+        return sentMQTT
 
 # [END - Class]
