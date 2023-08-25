@@ -166,7 +166,7 @@ class BaseElement:
                 # Status
                 if prefix.startswith('ul/'):
                     topic = f"{prefix}/{name}/attrs"
-                    value = f"STATUS.ID|{str(self.getAttribute(id=attr))}"
+                    value = f"STATUS.ID|{str(self.getStatus()[0])}"
                 else:
                     topic = f"{prefix}/{name}/STATUS.ID"
                     value = str(self.getStatus()[0])
@@ -175,7 +175,7 @@ class BaseElement:
 
                 if prefix.startswith('ul/'):
                     topic = f"{prefix}/{name}/attrs"
-                    value = f"STATUS.DESC|{str(self.getAttribute(id=attr))}"
+                    value = f"STATUS.DESC|{str(self.getStatus()[1])}"
                 else:
                     topic = f"{prefix}/{name}/STATUS.DESC"
                     value = str(self.getStatus()[1])
