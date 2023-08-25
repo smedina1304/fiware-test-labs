@@ -1,4 +1,4 @@
-curl --location 'http://localhost:4042/iot/services' \
+curl --location 'http://localhost:4041/iot/services' \
 --header 'fiware-service: poyry' \
 --header 'fiware-servicepath: /' \
 --header 'Content-Type: application/json' \
@@ -8,7 +8,7 @@ curl --location 'http://localhost:4042/iot/services' \
             "apikey": "PoyryLab",
             "cbroker": "http://orion:1026",
             "entity_type": "Equip",
-            "resource": ""
+            "resource": "/iot/json"
         }      
     ]
 }'
