@@ -8,8 +8,6 @@ curl --location 'http://localhost:4041/iot/devices' \
             "device_id": "TQ1",
             "entity_name": "urn:ngsi-ld:SiteSP:Envase01:TQ1",
             "entity_type": "Equip",
-            "protocol": "PDI-IoTA-UltraLight",
-            "transport": "MQTT",
             "attributes": [
                 {
                     "object_id": "STATUS.ID",
@@ -94,8 +92,6 @@ curl --location 'http://localhost:4041/iot/devices' \
             "device_id": "TQ2",
             "entity_name": "urn:ngsi-ld:SiteSP:Envase01:TQ2",
             "entity_type": "Equip",
-            "protocol": "PDI-IoTA-UltraLight",
-            "transport": "MQTT",
             "attributes": [
                 {
                     "object_id": "STATUS.ID",
@@ -180,8 +176,6 @@ curl --location 'http://localhost:4041/iot/devices' \
             "device_id": "TQ3",
             "entity_name": "urn:ngsi-ld:SiteSP:Envase01:TQ3",
             "entity_type": "Equip",
-            "protocol": "PDI-IoTA-UltraLight",
-            "transport": "MQTT",
             "attributes": [
                 {
                     "object_id": "STATUS.ID",

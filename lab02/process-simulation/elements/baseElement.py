@@ -171,13 +171,24 @@ class BaseElement:
             sentJSON['STATUS.DESC'] = value
 
             if agent_ip_port is not None:
-                url = f"http://{agent_ip_port}/iot/json?k={agent_ip_port}&i={name}"
+                url = f"http://{agent_ip_port}/iot/json?k={fiware_services_key}&i={name}"
 
                 payload = json.dumps(sentJSON)
-                headers = {"Content-Type": "application/json"}
+                headers = {
+                    "Content-Type": "application/json",
+                    "fiware-service": "poyry",
+                    "fiware-servicepath": "/"
+                }
 
                 res = requests.request("POST", url, headers=headers, data=payload)
+
+                print('## POST iotAgent JSON:', '\n',
+                      'url:', url,'\n',
+                      'payload:', payload,'\n',
+                      'response:', res,'\n'
+                )
 
         return sentMQTT
 
 # [END - Class]
+

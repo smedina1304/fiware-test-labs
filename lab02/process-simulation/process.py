@@ -628,6 +628,17 @@ def on_connect(client, userdata, flags, rc):
     else:
         print("# MQTT - Connection failed - ERROR!")
 
+# Split - Host & Port
+def split_host_port(string):
+    if not string.rsplit(':', 1)[-1].isdigit():
+        return (string, None)
+
+    string = string.rsplit(':', 1)
+
+    host = string[0]  # 1st index is always host
+    port = int(string[1])
+
+    return (host, port)
 
 # Main
 if __name__ == "__main__":
@@ -640,11 +651,22 @@ if __name__ == "__main__":
     options = "d:"
     
     # Long options
-    long_options = ["Debug="]
+    long_options = ["Debug=", "agent_ip_port=", "mqtt_ip_port="]
 
+
+    # Define parameters
+
+    # MQTT
+    # mqtt_broker = 'broker.hivemq.com'
+    # mqtt_port = 1883
+    mqtt_ip_port = 'localhost:1883'
+    mqtt_broker, mqtt_port = split_host_port(mqtt_ip_port)
+      
     # Debug Level
     debugLevel = 0
-    agent_ip_port = '192.168.0.35:4041'
+
+    # Fiware iot Agent Json
+    agent_ip_port = 'localhost:7896'    #'192.168.0.35:7896'
 
     try:
         # Parsing argument
@@ -659,8 +681,9 @@ if __name__ == "__main__":
                     debugLevel = 0
                     print (f'# ERROR: Argument ({currentArgument} = {currentValue}) is not valid!')
                     print ('- Arguments supported:', '\n', 
-                           f'\t(-d or --Debug) = [0, 1, 2 or 3]', '\n', 
-                           f'\t(--agent_ip_port) = <ip>:<port> or <hostname>:<port>')
+                           f'\t(-d or --Debug) = Debug Levels [0, 1, 2 or 3]', '\n', 
+                           f'\t(--agent_ip_port) = Fiware iot Agent Json <ip>:<port> or <hostname>:<port>', '\n',
+                           f'\t(--mqtt_ip_port) = MQTT Broker <ip>:<port> or <hostname>:<port>')
                 else:
                     debugLevel = int(currentValue)
 
@@ -670,25 +693,40 @@ if __name__ == "__main__":
                     debugLevel = 0
                     print (f'# ERROR: Argument ({currentArgument} = {currentValue}) is not valid!')
                     print ('- Arguments supported:', '\n', 
-                           f'\t(-d or --Debug) = [0, 1, 2 or 3]', '\n', 
-                           f'\t(--agent_ip_port) = <ip>:<port> or <hostname>:<port>')
+                           f'\t(-d or --Debug) = Debug Levels [0, 1, 2 or 3]', '\n', 
+                           f'\t(--agent_ip_port) = Fiware iot Agent Json <ip>:<port> or <hostname>:<port>', '\n',
+                           f'\t(--mqtt_ip_port) = MQTT Broker <ip>:<port> or <hostname>:<port>')
                 else:
-                    debugLevel = int(currentValue)        
+                    agent_ip_port = currentValue
+
+
+            elif currentArgument in ("--mqtt_ip_port"):
+                isValid = True if currentValue is not None else False
+                if not isValid:
+                    debugLevel = 0
+                    print (f'# ERROR: Argument ({currentArgument} = {currentValue}) is not valid!')
+                    print ('- Arguments supported:', '\n', 
+                           f'\t(-d or --Debug) = Debug Levels [0, 1, 2 or 3]', '\n', 
+                           f'\t(--agent_ip_port) = Fiware iot Agent Json <ip>:<port> or <hostname>:<port>', '\n',
+                           f'\t(--mqtt_ip_port) = MQTT Broker <ip>:<port> or <hostname>:<port>')
+
+                else:
+
+                    mqtt_broker, mqtt_port = split_host_port(currentValue)
+
+                    mqtt_broker = mqtt_broker if mqtt_broker is not None else 'localhost'
+                    mqtt_port   = mqtt_port if mqtt_port is not None else 1883
+
 
     except getopt.error as err:
-        print(f'# ERROR: {str(err)}', '\n\n')
+        print(f'# ERROR: {str(err)}')
         debugLevel = 0
 
     print ('\n\n','> Information:', '\n', 
             '- Arguments setted:', '\n', 
             f'\tDebug level = "{debugLevel}"', '\n', 
-            f'\tiotAgent (ip/port) = "{agent_ip_port}"', '\n')
-
-    # Define parameters
-    # mqtt_broker = 'broker.hivemq.com'
-    # mqtt_port = 1883
-    mqtt_broker = 'localhost'
-    mqtt_port = 1883    
+            f'\tiotAgent (ip/port) = "{agent_ip_port}"', '\n'
+            f'\tMQTT Broker (ip/port) = "{mqtt_ip_port}"', '\n')
 
     # MQTT broker
     client = paho.Client("MyProcessSimulation")         #create new instance
@@ -703,7 +741,7 @@ if __name__ == "__main__":
         mqtt_client=client, 
         mqtt_prefix='scadalts/sm',
         fiware_services_key = 'PoyryLab',
-        agent_ip_port = '192.168.0.35:4041',
+        agent_ip_port = agent_ip_port,
         sleepTime=5, 
         debugLevel=debugLevel
     )
