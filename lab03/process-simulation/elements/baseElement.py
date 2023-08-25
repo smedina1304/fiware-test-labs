@@ -124,7 +124,7 @@ class BaseElement:
         except KeyError:
             return None
 
-    def publishMQTT(self, mqtt_client:paho.Client=None, mqtt_prefix=None):
+    def publishMQTT(self, mqtt_client:paho.Client=None, mqtt_prefix=None, fiware_services_key=None):
         """
         Metodo publishMQTT
 
@@ -137,30 +137,50 @@ class BaseElement:
         Parametros:
         - mqtt_client: Classe de conexão com o Server MQTT
         - mqtt_prefix: Prefixo do Tópico que receberá o valor
-        """        
+        - fiware_services_key: Chave do serviço do FIWARE para o padrão "UltraLight" para iotAgente MQTT
+        """
+
+        prefixes = [mqtt_prefix, f'ul/{fiware_services_key}' ]
         sentData = {}
+        topic = None
+        value = None
+        
         if ((mqtt_client is not None) and
             (mqtt_prefix is not None)):
             name = self.getAttribute(id='NAME')
 
-            # Atributos
-            attrs = list(self.getAttributes().keys())[1:]
-            for attr in attrs:
-                topic = f"{mqtt_prefix}/{name}/{attr}"
-                value = str(self.getAttribute(id=attr))
+            for prefix in prefixes:
+                # Atributos
+                attrs = list(self.getAttributes().keys())[1:]
+                for attr in attrs:
+                    if prefix.startswith('ul/'):
+                        topic = f"{prefix}/{name}/attrs"
+                        value = f"{name}|{str(self.getAttribute(id=attr))}"                      
+                    else:
+                        topic = f"{prefix}/{name}/{attr}"
+                        value = str(self.getAttribute(id=attr))
+
+                    mqtt_client.publish(topic, value)
+                    sentData[topic] = value
+
+                # Status
+                if prefix.startswith('ul/'):
+                    topic = f"{prefix}/{name}/attrs"
+                    value = f"STATUS.ID|{str(self.getStatus()[0])}"
+                else:
+                    topic = f"{prefix}/{name}/STATUS.ID"
+                    value = str(self.getStatus()[0])
                 mqtt_client.publish(topic, value)
                 sentData[topic] = value
 
-            # Status
-            topic = f"{mqtt_prefix}/{name}/STATUS.ID"
-            value = str(self.getStatus()[0])
-            mqtt_client.publish(topic, value)
-            sentData[topic] = value
-
-            topic = f"{mqtt_prefix}/{name}/STATUS.DESC"
-            value = str(self.getStatus()[1])
-            mqtt_client.publish(topic, value)
-            sentData[topic] = value
+                if prefix.startswith('ul/'):
+                    topic = f"{prefix}/{name}/attrs"
+                    value = f"STATUS.DESC|{str(self.getStatus()[1])}"
+                else:
+                    topic = f"{prefix}/{name}/STATUS.DESC"
+                    value = str(self.getStatus()[1])
+                mqtt_client.publish(topic, value)
+                sentData[topic] = value
 
         return sentData
 
