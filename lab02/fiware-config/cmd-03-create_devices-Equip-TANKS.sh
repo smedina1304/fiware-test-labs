@@ -10,13 +10,13 @@ curl --location 'http://localhost:4041/iot/devices' \
             "entity_type": "Equip",
             "attributes": [
                 {
-                    "object_id": "STATUS.ID",
-                    "name": "STATUS.ID",
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
                     "type": "Text"
                 },
                 {
-                    "object_id": "STATUS.DESC",
-                    "name": "STATUS.DESC",
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
                     "type": "Text"
                 },
                 {
@@ -25,23 +25,23 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Number"
                 },
                 {
-                    "object_id": "LEVEL.HIGH",
-                    "name": "LEVEL.HIGH",
+                    "object_id": "LEVEL_HIGH",
+                    "name": "LEVEL_HIGH",
+                    "type": "Number"
+                },
+                {
+                    "object_id": "LEVEL_HIGH_ALARM",
+                    "name": "LEVEL_HIGH_ALARM",
                     "type": "Boolean"
                 },
                 {
-                    "object_id": "LEVEL.HIGH.ALARM",
-                    "name": "LEVEL.HIGH.ALARM",
-                    "type": "Boolean"
+                    "object_id": "LEVEL_LOW",
+                    "name": "LEVEL_LOW",
+                    "type": "Number"
                 },
                 {
-                    "object_id": "LEVEL.LOW",
-                    "name": "LEVEL.LOW",
-                    "type": "Boolean"
-                },
-                {
-                    "object_id": "LEVEL.LOW.ALARM",
-                    "name": "LEVEL.LOW.ALARM",
+                    "object_id": "LEVEL_LOW_ALARM",
+                    "name": "LEVEL_LOW_ALARM",
                     "type": "Boolean"
                 },
                 {
@@ -55,8 +55,8 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Number"
                 },
                 {
-                    "object_id": "CAPACITY.UNIT",
-                    "name": "CAPACITY.UNIT",
+                    "object_id": "CAPACITY_UNIT",
+                    "name": "CAPACITY_UNIT",
                     "type": "Text"
                 },
                 {
@@ -65,19 +65,19 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Number"
                 },
                 {
-                    "object_id": "TEMP.ALARM",
-                    "name": "TEMP.ALARM",
+                    "object_id": "TEMP_ALARM",
+                    "name": "TEMP_ALARM",
                     "type": "Boolean"
                 },
                 {
-                    "object_id": "TEMP.LOW",
-                    "name": "TEMP.LOW",
-                    "type": "Boolean"
+                    "object_id": "TEMP_LOW",
+                    "name": "TEMP_LOW",
+                    "type": "Number"
                 },
                 {
-                    "object_id": "TEMP.HIGH",
-                    "name": "TEMP.HIGH",
-                    "type": "Boolean"
+                    "object_id": "TEMP_HIGH",
+                    "name": "TEMP_HIGH",
+                    "type": "Number"
                 }
             ],
             "static_attributes": [
@@ -94,13 +94,13 @@ curl --location 'http://localhost:4041/iot/devices' \
             "entity_type": "Equip",
             "attributes": [
                 {
-                    "object_id": "STATUS.ID",
-                    "name": "STATUS.ID",
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
                     "type": "Text"
                 },
                 {
-                    "object_id": "STATUS.DESC",
-                    "name": "STATUS.DESC",
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
                     "type": "Text"
                 },
                 {
@@ -109,23 +109,23 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Number"
                 },
                 {
-                    "object_id": "LEVEL.HIGH",
-                    "name": "LEVEL.HIGH",
+                    "object_id": "LEVEL_HIGH",
+                    "name": "LEVEL_HIGH",
+                    "type": "Number"
+                },
+                {
+                    "object_id": "LEVEL_HIGH_ALARM",
+                    "name": "LEVEL_HIGH_ALARM",
                     "type": "Boolean"
                 },
                 {
-                    "object_id": "LEVEL.HIGH.ALARM",
-                    "name": "LEVEL.HIGH.ALARM",
-                    "type": "Boolean"
+                    "object_id": "LEVEL_LOW",
+                    "name": "LEVEL_LOW",
+                    "type": "Number"
                 },
                 {
-                    "object_id": "LEVEL.LOW",
-                    "name": "LEVEL.LOW",
-                    "type": "Boolean"
-                },
-                {
-                    "object_id": "LEVEL.LOW.ALARM",
-                    "name": "LEVEL.LOW.ALARM",
+                    "object_id": "LEVEL_LOW_ALARM",
+                    "name": "LEVEL_LOW_ALARM",
                     "type": "Boolean"
                 },
                 {
@@ -139,8 +139,8 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Number"
                 },
                 {
-                    "object_id": "CAPACITY.UNIT",
-                    "name": "CAPACITY.UNIT",
+                    "object_id": "CAPACITY_UNIT",
+                    "name": "CAPACITY_UNIT",
                     "type": "Text"
                 },
                 {
@@ -149,19 +149,19 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Number"
                 },
                 {
-                    "object_id": "TEMP.ALARM",
-                    "name": "TEMP.ALARM",
+                    "object_id": "TEMP_ALARM",
+                    "name": "TEMP_ALARM",
                     "type": "Boolean"
                 },
                 {
-                    "object_id": "TEMP.LOW",
-                    "name": "TEMP.LOW",
-                    "type": "Boolean"
+                    "object_id": "TEMP_LOW",
+                    "name": "TEMP_LOW",
+                    "type": "Number"
                 },
                 {
-                    "object_id": "TEMP.HIGH",
-                    "name": "TEMP.HIGH",
-                    "type": "Boolean"
+                    "object_id": "TEMP_HIGH",
+                    "name": "TEMP_HIGH",
+                    "type": "Number"
                 }
             ],
             "static_attributes": [
@@ -178,13 +178,13 @@ curl --location 'http://localhost:4041/iot/devices' \
             "entity_type": "Equip",
             "attributes": [
                 {
-                    "object_id": "STATUS.ID",
-                    "name": "STATUS.ID",
+                    "object_id": "STATUS_ID",
+                    "name": "STATUS_ID",
                     "type": "Text"
                 },
                 {
-                    "object_id": "STATUS.DESC",
-                    "name": "STATUS.DESC",
+                    "object_id": "STATUS_DESC",
+                    "name": "STATUS_DESC",
                     "type": "Text"
                 },
                 {
@@ -193,23 +193,23 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Number"
                 },
                 {
-                    "object_id": "LEVEL.HIGH",
-                    "name": "LEVEL.HIGH",
+                    "object_id": "LEVEL_HIGH",
+                    "name": "LEVEL_HIGH",
+                    "type": "Number"
+                },
+                {
+                    "object_id": "LEVEL_HIGH_ALARM",
+                    "name": "LEVEL_HIGH_ALARM",
                     "type": "Boolean"
                 },
                 {
-                    "object_id": "LEVEL.HIGH.ALARM",
-                    "name": "LEVEL.HIGH.ALARM",
-                    "type": "Boolean"
+                    "object_id": "LEVEL_LOW",
+                    "name": "LEVEL_LOW",
+                    "type": "Number"
                 },
                 {
-                    "object_id": "LEVEL.LOW",
-                    "name": "LEVEL.LOW",
-                    "type": "Boolean"
-                },
-                {
-                    "object_id": "LEVEL.LOW.ALARM",
-                    "name": "LEVEL.LOW.ALARM",
+                    "object_id": "LEVEL_LOW_ALARM",
+                    "name": "LEVEL_LOW_ALARM",
                     "type": "Boolean"
                 },
                 {
@@ -223,8 +223,8 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Number"
                 },
                 {
-                    "object_id": "CAPACITY.UNIT",
-                    "name": "CAPACITY.UNIT",
+                    "object_id": "CAPACITY_UNIT",
+                    "name": "CAPACITY_UNIT",
                     "type": "Text"
                 },
                 {
@@ -233,19 +233,19 @@ curl --location 'http://localhost:4041/iot/devices' \
                     "type": "Number"
                 },
                 {
-                    "object_id": "TEMP.ALARM",
-                    "name": "TEMP.ALARM",
+                    "object_id": "TEMP_ALARM",
+                    "name": "TEMP_ALARM",
                     "type": "Boolean"
                 },
                 {
-                    "object_id": "TEMP.LOW",
-                    "name": "TEMP.LOW",
-                    "type": "Boolean"
+                    "object_id": "TEMP_LOW",
+                    "name": "TEMP_LOW",
+                    "type": "Number"
                 },
                 {
-                    "object_id": "TEMP.HIGH",
-                    "name": "TEMP.HIGH",
-                    "type": "Boolean"
+                    "object_id": "TEMP_HIGH",
+                    "name": "TEMP_HIGH",
+                    "type": "Number"
                 }
             ],
             "static_attributes": [
