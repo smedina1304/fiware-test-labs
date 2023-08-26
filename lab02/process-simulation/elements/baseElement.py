@@ -182,11 +182,11 @@ class BaseElement:
 
                 res = requests.request("POST", url, headers=headers, data=payload)
 
-                print('## POST iotAgent JSON:', '\n',
-                      'url:', url,'\n',
-                      'payload:', payload,'\n',
-                      'response:', res,'\n'
-                )
+                # print('## POST iotAgent JSON:', '\n',
+                #       'url:', url,'\n',
+                #       'payload:', payload,'\n',
+                #       'response:', res,'\n'
+                # )
 
         return sentMQTT
 
