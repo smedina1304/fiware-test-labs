@@ -3,11 +3,11 @@ curl --location 'http://localhost:1026/v2/subscriptions/' \
 --header 'fiware-service: poyry' \
 --header 'fiware-servicepath: /' \
 --data '{
-    "description": "Notify Cygnus of Station Weather changes",
+    "description": "Notify Cygnus of Pumps changes",
     "subject": {
         "entities": [
             {
-                "idPattern": "urn:ngsi-ld:SiteSP:Envase01:TQ*",
+                "idPattern": "urn:ngsi-ld:SiteSP:Envase01:PUMP*",
                 "type": "Equip"
             }
         ]
@@ -19,18 +19,7 @@ curl --location 'http://localhost:1026/v2/subscriptions/' \
         "attrs": [
             "STATUS_ID",
             "STATUS_DESC",
-            "LEVEL",
-            "LEVEL_HIGH",
-            "LEVEL_HIGH_ALARM",
-            "LEVEL_LOW",
-            "LEVEL_LOW_ALARM",
-            "VOLUME",
-            "CAPACITY",
-            "CAPACITY_UNIT",
-            "TEMPERATURE",
-            "TEMP_ALARM",
-            "TEMP_LOW",
-            "TEMP_HIGH"
+            "OPERATION"
         ]
     },
     "throttling": 5
