@@ -166,11 +166,11 @@ curl --location 'http://localhost:1026/v2/subscriptions/' \
 --header 'fiware-service: poyry' \
 --header 'fiware-servicepath: /' \
 --data '{
-    "description": "Notify Cygnus - VALVE_3_RET",
+    "description": "Notify Cygnus - VALVE_3_OUT",
     "subject": {
         "entities": [
             {
-                "idPattern": "urn:ngsi-ld:SiteSP:Envase01:VALVE_3_RET",
+                "idPattern": "urn:ngsi-ld:SiteSP:Envase01:VALVE_3_OUT",
                 "type": "Equip"
             }
         ]
