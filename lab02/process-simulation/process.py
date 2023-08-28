@@ -492,7 +492,7 @@ class ProcessSimulation():
                     tankBlender.setAttribute(id='VOLUME' , value=round((volume - self.__litrosCiclo), 2))
                     tankBlender.setAttribute(id='LEVEL' , value=int(((volume - self.__litrosCiclo)/capacity)*100))
 
-                    if self.__litrosLote > self.__litrosLoteMax:
+                    if self.__litrosLote >= self.__litrosLoteMax:
                         self.__totalLotes += 1
                         self.__litrosLote = self.__litrosLote-self.__litrosLoteMax
 
