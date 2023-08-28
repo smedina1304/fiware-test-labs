@@ -1,0 +1,29 @@
+{
+    "devices": [
+        {
+            "device_id": "COUNTER",
+            "entity_name": "urn:ngsi-ld:SiteSP:Envase01:COUNTER",
+            "entity_type": "Equip",
+            "attributes": [
+                {
+                    "object_id": "BATCH_COUNT",
+                    "name": "BATCH_COUNT",
+                    "type": "Number"
+                },
+                {
+                    "object_id": "BATCH_LITERS",
+                    "name": "BATCH_LITERS",
+                    "type": "Number"
+                }
+            ],
+            "static_attributes": [
+                {
+                    "name": "refStore",
+                    "type": "Relationship",
+                    "value": "urn:ngsi-ld:SiteSP:Envase01"
+                }
+            ]
+        }
+    ]
+}
+
