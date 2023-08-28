@@ -5,6 +5,8 @@
 # [START import_module]
 import time
 import random
+import json
+import requests
 import getopt, sys
 import paho.mqtt.client as paho
 
@@ -493,6 +495,20 @@ class ProcessSimulation():
                     tankBlender.setAttribute(id='LEVEL' , value=int(((volume - self.__litrosCiclo)/capacity)*100))
 
                     if self.__litrosLote >= self.__litrosLoteMax:
+
+                        # Atualização - Fiware device COUNTER #
+                        if agent_ip_port is not None:
+                            url = f"http://{self.agent_ip_port}/iot/json?k={self.fiware_services_key}&i=COUNTER"
+
+                            payload = json.dumps({"BATCH_COUNT": 1, "BATCH_LITERS": self.__litrosLote})
+                            headers = {
+                                "Content-Type": "application/json",
+                                "fiware-service": "poyry",
+                                "fiware-servicepath": "/"
+                            }
+
+                            res = requests.request("POST", url, headers=headers, data=payload)
+
                         self.__totalLotes += 1
                         self.__litrosLote = self.__litrosLote-self.__litrosLoteMax
 
