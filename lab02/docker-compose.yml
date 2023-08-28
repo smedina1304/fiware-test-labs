@@ -169,14 +169,14 @@ services:
       - ./db/mysql/data:/var/lib/mysql
       # - mysql-db:/var/lib/mysql
 
-  grafana:
-    image: grafana/grafana
-    hostname: grafana
-    container_name: grafana
-    depends_on:
-        - mysql-db
-    ports:
-        - "3000:3000"
+  # grafana:
+  #   image: grafana/grafana
+  #   hostname: grafana
+  #   container_name: grafana
+  #   depends_on:
+  #       - mysql-db
+  #   ports:
+  #       - "3000:3000"
 
   scadalts:
     image: scadalts/scadalts:latest
