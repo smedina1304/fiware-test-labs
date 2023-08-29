@@ -144,7 +144,7 @@ services:
       - "CYGNUS_MYSQL_PASS=root" # Password for the MySQL database user
       - "CYGNUS_SERVICE_PORT=5050"
       - "CYGNUS_API_PORT=5080" # Port that Cygnus listens on for operational reasons
-      - "CYGNUS_LOG_LEVEL=DEBUG" # The logging level for Cygnus
+      - "CYGNUS_LOG_LEVEL=ERROR" # The logging level for Cygnus [ALL < DEBUG < INFO < WARN < ERROR < FATAL < OFF]
     healthcheck:
       test: curl --fail -s http://localhost:5080/v1/version || exit 1
 
